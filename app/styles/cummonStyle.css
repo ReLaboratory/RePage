@@ -1,0 +1,16 @@
+/* 서울남산 폰트 */
+@font-face {
+  font-family: 'seoul-namsan-jang-l';
+  src: url('../fonts/seoulnamsanjangl.eot');
+  src: url('../fonts/seoulnamsanjangl.eot?#iefix') format('embedded-opentype'),
+       url('../fonts/seoulnamsanjangl.woff2') format('woff2'),
+       url('../fonts/seoulnamsanjangl.woff') format('woff'),
+       url('../fonts/seoulnamsanjangl.ttf') format('truetype'),
+       url('../fonts/seoulnamsanjangl.svg#seoul-namsan-jang-l') format('svg');
+  font-weight: normal;
+  font-style: normal;
+}
+
+body {
+  font-family: 'seoul-namsan-jang-l'
+}
