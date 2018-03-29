@@ -1,0 +1,93 @@
+@keyframes bounceInDown {
+  from,
+  60%,
+  75%,
+  90%,
+  to {
+    animation-timing-function: cubic-bezier(0.215, 0.61, 0.355, 1);
+  }
+
+  0% {
+    opacity: 0;
+    transform: translate3d(0, -3000px, 0);
+  }
+
+  60% {
+    opacity: 1;
+    transform: translate3d(0, 25px, 0);
+  }
+
+  75% {
+    transform: translate3d(0, -10px, 0);
+  }
+
+  90% {
+    transform: translate3d(0, 5px, 0);
+  }
+
+  to {
+    transform: translate3d(0, 0, 0);
+    opacity: 1;
+  }
+}
+
+@keyframes jackInTheBox {
+  from {
+    opacity: 0;
+    transform: scale(0.1) rotate(30deg);
+    transform-origin: center bottom;
+  }
+
+  50% {
+    transform: rotate(-10deg);
+  }
+
+  70% {
+    transform: rotate(3deg);
+  }
+
+  to {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+
+.header {
+  background: linear-gradient(to right bottom, #F4DE77, #FE93AF);
+  height: 100vh;
+  position: relative;
+}
+
+.header__title {
+  color: white;
+  font-size: 100px;
+  line-height: 100px;
+  text-align: center;
+  padding-top: calc(50vh - 190px);
+  animation: jackInTheBox 1s;
+}
+
+.header__scroll-down-icon {
+  width: 0; 
+  height: 0; 
+  border-left: 50px solid transparent;
+  border-right: 50px solid transparent;
+  border-top: 30px solid rgba(255, 255, 255, 0.5);
+  cursor: pointer;
+  position: absolute;
+  bottom: 50px;
+  left: 50%;
+  margin-left: -50px;
+  opacity: 0;
+  animation: bounceInDown 1s 1s forwards;
+  transition: border-top 0.3s;
+}
+
+.header__scroll-down-icon:hover {
+  border-top: 50px solid rgba(255, 255, 255, 0.8); 
+}
+
+.main {
+  height: 2000px;
+}
