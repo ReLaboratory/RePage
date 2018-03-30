@@ -14,13 +14,13 @@
 .top-nav {
   font-family: 'SNJL';
   color: white;
-  font-size: 30px;
-  line-height: 30px;
+  font-size: 20px;
+  line-height: 20px;
   padding: 30px 50px;
 }
 
 .top-nav__logo img {
-  height: 90px;
+  height: 80px;
 }
 
 .top-nav__links {
@@ -32,6 +32,7 @@
   transition: background-color 0.3s;
   padding: 20px 20px;
   border-radius: 20px 0 20px 0;
+  cursor: pointer;
 }
 
 .top-nav__link:hover {
