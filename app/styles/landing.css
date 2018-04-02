@@ -98,7 +98,7 @@
 /*  section introduce-reliablers */
 
 .section--introduce-reliablers {
-  background: linear-gradient(to right bottom, white, rgb(138, 138, 138));
+  background: linear-gradient(to right bottom, white, rgb(216, 216, 216));
   padding: 50px;
 }
 
@@ -108,14 +108,17 @@
 }
 
 .style-table__cell {
-  border: 1px solid red;
   overflow: hidden;
+  font-size: 5vw;
+  /* font-weight: bolder; */
+  width: 20%;
+  height: calc(100% / 3);
 }
 
 .hover-animation-box {
   width: 100%;
   height: 100%;
-  transition: 0.5s transform;
+  transition: 0.5s transform 0.2s;
 }
 
 /* animation from up */
@@ -146,28 +149,20 @@
   transform: translateY(0);
 }
 
+.cell--color0 {
+  background-color: #FFFFFF;
+}
+
 .cell--color1 {
-  background-color: #FFA087;
-}
-
-.cell--color2 {
-  background-color: #E7827A;
-}
-
-.cell--color3 {
   background-color: #FE93AF;
 }
 
-.cell--color4 {
-  background-color: #E77ACD;
+.cell--color2 {
+  background-color: #FEA3DF;
 }
 
-.cell--color5 {
-  background-color: #ED87FF;
-}
-
-.cell--color6 {
-  background-color: #D6D6D6;
+.cell--color3 {
+  background-color: #B6B6B6;
 }
 
 /* section introduce-remembers */

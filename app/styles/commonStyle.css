@@ -11,8 +11,11 @@
   font-style: normal;
 }
 
-.top-nav {
+body {
   font-family: 'SNJL';
+}
+
+.top-nav {
   color: white;
   font-size: 20px;
   line-height: 20px;
