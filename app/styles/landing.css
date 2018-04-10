@@ -68,6 +68,7 @@
   padding-top: calc(50vh - 110px);
   animation: jackInTheBox 1s;
   font-weight: bolder;
+  text-shadow: 7px 7px 8px rgba(0, 0, 0, 0.16);
 }
 
 .header__scroll-down-icon {
@@ -118,6 +119,7 @@
   padding-bottom: 30px;
   text-align: center;
   font-weight: bolder;
+  text-shadow: 7px 7px 8px rgba(0, 0, 0, 0.16);
 }
 
 .section__line {
@@ -149,7 +151,7 @@
   width: 150px;
   height: 150px;
   border-radius: 100%;
-  box-shadow: 8px 8px 15px rgba(0, 0, 0, 0.137);
+  box-shadow: 2px 3px 6px rgba(0, 0, 0, 0.336);
   overflow: hidden;
 }
 
