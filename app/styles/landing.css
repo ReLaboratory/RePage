@@ -55,7 +55,7 @@
 /* header */
 
 .header {
-  background: linear-gradient(to bottom, #F4DE77, #FE93AF);
+  background: linear-gradient(to right, #F4DE77, #FE93AF);
   height: 100vh;
   position: relative;
 }
@@ -68,7 +68,9 @@
   padding-top: calc(50vh - 110px);
   animation: jackInTheBox 1s;
   font-weight: bolder;
-  text-shadow: 7px 7px 8px rgba(0, 0, 0, 0.16);
+  position: relative;
+  z-index: 60;
+  /* text-shadow: 7px 7px 8px rgba(0, 0, 0, 0.16); */
 }
 
 .header__scroll-down-icon {
@@ -85,7 +87,7 @@
   opacity: 0;
   animation: bounceInDown 1s 1s forwards;
   transition: border-top 0.3s;
-  z-index: 5;
+  z-index: 65;
 }
 
 .header__scroll-down-icon:hover {
@@ -108,8 +110,7 @@
 /* section introduce-remembers */
 
 .section--introduce-remembers {
-  background: linear-gradient(to bottom, #FE93AF, #D69CE6);
-  color: white;
+  color: black;
 }
 
 .section__title {
@@ -119,7 +120,7 @@
   padding-bottom: 30px;
   text-align: center;
   font-weight: bolder;
-  text-shadow: 7px 7px 8px rgba(0, 0, 0, 0.16);
+  /* text-shadow: 7px 7px 8px rgba(0, 0, 0, 0.16); */
 }
 
 .section__line {
@@ -151,8 +152,8 @@
   width: 150px;
   height: 150px;
   border-radius: 100%;
-  box-shadow: 2px 3px 6px rgba(0, 0, 0, 0.336);
   overflow: hidden;
+  border: 1px solid lightgray;
 }
 
 .profile__links {
