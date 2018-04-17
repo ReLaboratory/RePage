@@ -15,6 +15,10 @@ body {
   font-family: 'SNJL';
 }
 
+header {
+  padding-top: 80px;
+}
+
 .top-nav {
   color: white;
   font-size: 20px;
@@ -25,10 +29,11 @@ body {
   z-index: 50;
   width: 100%;
   background: linear-gradient(to right, #F4DE77, #FE93AF);
+  height: 80px;
 }
 
 .top-nav__logo img {
-  height: 80px;
+  height: 60px;
 }
 
 .top-nav__links {

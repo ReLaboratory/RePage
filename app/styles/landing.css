@@ -61,11 +61,11 @@
 }
 
 .header__title {
+  padding-top: calc(50vh - 200px);
   color: white;
   font-size: 100px;
   line-height: 100px;
   text-align: center;
-  padding-top: calc(50vh - 110px);
   animation: jackInTheBox 1s;
   font-weight: bolder;
   position: relative;
@@ -94,6 +94,14 @@
   border-top: 50px solid rgba(255, 255, 255, 0.8); 
 }
 
+/* main */
+
+.main {
+  background: url("../images/bg-landing.png");
+  background-size: cover;
+  background-repeat: repeat-y;
+}
+
 /* section */
 
 .section {
@@ -118,14 +126,28 @@
   line-height: 80px;
   padding-top: 180px;
   padding-bottom: 30px;
+  width: 500px;
+  margin-left: 50%;
+  transform: translateX(-50%);
   text-align: center;
   font-weight: bolder;
-  /* text-shadow: 7px 7px 8px rgba(0, 0, 0, 0.16); */
+  background-image: -webkit-linear-gradient(left, #F4DE77, #FE93AF);
+  background-image:    -moz-linear-gradient(left, #F4DE77, #FE93AF);
+  background-image:     -ms-linear-gradient(left, #F4DE77, #FE93AF);
+  background-image:      -o-linear-gradient(left, #F4DE77, #FE93AF);
+  background-image:         linear-gradient(to right, #F4DE77, #FE93AF);
+  color:transparent;
+  -webkit-background-clip: text;
+  background-clip: text;
 }
 
 .section__line {
   width: 125px;
-  border: 3px solid white;
+  border: 5px solid transparent;
+  -moz-border-image: -moz-linear-gradient(left, #F4DE77, #FE93AF);
+  -webkit-border-image: -webkit-linear-gradient(left, #F4DE77, #FE93AF);
+  border-image: linear-gradient(to right, #F4DE77, #FE93AF);
+  border-image-slice: 1;
 }
 
 .section__content {
@@ -147,13 +169,13 @@
 
 .remember__profile {
   background-color: white;
-  background-image: url('../images/28056351_2248693855357721_4544925561609419108_n.jpg');
   background-size: contain;
   width: 150px;
   height: 150px;
   border-radius: 100%;
   overflow: hidden;
-  border: 1px solid lightgray;
+  border: 1px solid #DDD;
+  box-shadow: 4px 4px 10px rgba(0, 0, 0, 0.349);
 }
 
 .profile__links {
