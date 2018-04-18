@@ -55,3 +55,6 @@ a {
 	text-decoration: inherit;
 	color: inherit;
 }
+button {
+	outline: none;
+}

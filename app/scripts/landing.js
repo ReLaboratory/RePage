@@ -1,8 +1,12 @@
 window.onload = function() {
   
-  var scrollDownIcon = document.getElementsByClassName('header__scroll-down-icon');
-  scrollDownIcon[0].onclick = function() {
-    document.getElementsByClassName('section')[0].scrollIntoView({behavior: 'smooth'});
+  var scrollDownIcon = document.querySelector('.header__scroll-down-button');
+  scrollDownIcon.onclick = function() {
+    document.querySelector('.section').scrollIntoView({behavior: 'smooth'});
   }
 
+  window.onscroll = function() {
+    // if(window.scrollY >=)
+    // console.log(document.querySelector('.section').)
+  }
 }

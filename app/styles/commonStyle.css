@@ -33,7 +33,8 @@ header {
 }
 
 .top-nav__logo img {
-  height: 60px;
+  height: 40px;
+  margin: 10px;
 }
 
 .top-nav__links {
