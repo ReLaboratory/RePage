@@ -1,3 +1,12 @@
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
 @keyframes fadeInDown {
   from {
     opacity: 0;
@@ -32,12 +41,39 @@
   }
 }
 
+@keyframes float {
+  0% {
+    background-position-y: 10vw;
+  }
+  50% {
+    background-position-y: 8vw;
+  }
+}
+
 /* header */
 
 .header {
   background: linear-gradient(to right, #F4DE77, #FE93AF);
   height: 100vh;
+  width: 100%;
   position: relative;
+}
+
+#particles-js{
+  width: 100%;
+  height: 100vh;
+  background-color: none;
+  background-image: url('');
+  background-size: cover;
+  background-position: 50% 50%;
+  background-repeat: no-repeat;
+  position: absolute;
+  top: 0;
+  z-index: 65;
+}
+
+.header__container {
+  animation: fadeInLeft 2s ease-out;
 }
 
 .header__title {
@@ -46,7 +82,6 @@
   font-size: 140px;
   line-height: 140px;
   text-align: center;
-  animation: fadeInLeft 2s ease-out;
   position: relative;
   font-weight: bolder;
   z-index: 60;
@@ -56,7 +91,6 @@
   letter-spacing: 40px;
   font-size: 20px;
   line-height: 20px;
-  animation: fadeInLeft 2s ease-out;
   color: white;
   text-align: center;
   position: relative;
@@ -73,13 +107,13 @@
   border-radius: 10px;
   color: white;
   background-color: rgba(255, 255, 255, 0.178);
-  cursor: pointer;
   margin: 100px auto;
   display: block;
   opacity: 0;
   animation: fadeInDown 1s 2s forwards;
   transition: background-color 0.3s;
-  z-index: 65;
+  position: relative;
+  z-index: 70;
 }
 
 .header__scroll-down-button:hover {
@@ -93,6 +127,7 @@
   background-size: cover;
   background-position: center center;
   background-repeat: repeat-y;
+  position: relative;
 }
 
 /*  section introduce-reliablers */
@@ -101,12 +136,13 @@
   padding: 50px;
   background: url(../images/rocket.png) no-repeat;
   background-size: 30vw;
-  background-position: 10vw 10vw;
+  background-position: 12vw 10vw;
+  animation: float 2s ease-in-out infinite;
 }
 
 .devided-container {
   width: 50%;
-  margin-left: 50%;
+  margin: 50px 50px 50px 50%;
   padding: 200px 100px 100px 0;
 }
 
@@ -126,9 +162,19 @@
 
 /* section introduce-remembers */
 
+.animation--remembers .section__title {animation: fadeIn 1s forwards;}
+.animation--remembers .section__line,
+.animation--remembers .section__content {animation: fadeInLeft 2s forwards;}
+.animation--remembers .remember {animation: fadeIn 1s forwards;}
+.animation--remembers .remember:nth-child(1) {animation-delay: 1s;}
+.animation--remembers .remember:nth-child(2) {animation-delay: 1.2s;}
+.animation--remembers .remember:nth-child(3) {animation-delay: 1.4s;}
+.animation--remembers .remember:nth-child(4) {animation-delay: 1.6s;}
+.animation--remembers .remember:nth-child(5) {animation-delay: 1.8s;}
+.animation--remembers .remember:nth-child(6) {animation-delay: 2.0s;}
+
 .section--introduce-remembers {
   color: black;
-  padding-top: 180px;
 }
 
 .section__title {
@@ -141,11 +187,13 @@
   text-align: center;
   font-weight: bolder;
   color: #FE93AF;
+  opacity: 0;
 }
 
 .section__line {
   width: 125px;
   border: 5px solid #FE93AF;
+  opacity: 0;
 }
 
 .section__content {
@@ -153,6 +201,7 @@
   line-height: 40px;
   padding-top: 40px;
   text-align: center;
+  opacity: 0;
 }
 
 .remembers {
@@ -162,6 +211,7 @@
 }
 
 .remember {
+  opacity: 0;
   display: inline-block;
   margin: 80px 50px 0 50px;
 }
