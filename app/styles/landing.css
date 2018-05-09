@@ -43,10 +43,10 @@
 
 @keyframes float {
   0% {
-    background-position-y: 10vw;
+    background-position-y: 6vw;
   }
   50% {
-    background-position-y: 8vw;
+    background-position-y: 4vw;
   }
 }
 
@@ -120,30 +120,89 @@
   background-color: rgba(255, 255, 255, 0.534);
 }
 
-/* main */
-
-.section {
-  background-image: url("../images/bg-landing.png");
-  background-size: cover;
-  background-position: center center;
-  background-repeat: repeat-y;
-  position: relative;
+.scroll-target {
+  /* display: none; */
+  position: absolute;
+  top: calc(100vh - 60px);
+  height: 100vh;
+  z-index: -100;
 }
+
+/* main */
 
 /*  section introduce-reliablers */
 
-.element-for-bg--rocket {
+.section--introduce-reliablers {
+  height: calc(100vh - 60px);
   padding: 50px;
+}
+
+.introduce-reliablers-navigation {
+  background: black;
+}
+
+.for-bg-ani {
+  padding: 10px 50px;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 101;
+  width: 100%;
+  height: 60px;
+  transition: 0.5s; 
+}
+
+.section__title {
+  font-size: 80px;
+  line-height: 80px;
+  padding-bottom: 30px;
+  width: 500px;
+  margin-left: 50%;
+  transform: translateX(-50%);
+  text-align: center;
+  font-weight: bolder;
+  color: #FE93AF;
+}
+
+.section__line {
+  width: 125px;
+  border: 5px solid #FE93AF;
+  opacity: 0;
+}
+
+.section__content {
+  font-size: 20px;
+  line-height: 40px;
+  padding-top: 40px;
+  text-align: center;
+  opacity: 0;
+}
+
+.section__title--white {
+  color: white;
+}
+
+.element-for-bg--night {
+  height: 100%;
+  background: url(../images/bg-night.png) no-repeat;
+  background-size: cover;
+  background-position: center center;
+}
+.element-for-bg--rocket {
+  height: 100%;
   background: url(../images/rocket.png) no-repeat;
   background-size: 30vw;
-  background-position: 12vw 10vw;
+  background-position: 9vw 6vw;
   animation: float 2s ease-in-out infinite;
 }
 
 .devided-container {
+  height: 100%;
   width: 50%;
-  margin: 50px 50px 50px 50%;
-  padding: 200px 100px 100px 0;
+  margin-left: 50%;
+  padding: 120px 300px 120px 0;
+  color: white;
+  overflow-y: scroll;
 }
 
 .section__paragraph-title {
@@ -175,32 +234,14 @@
 
 .section--introduce-remembers {
   color: black;
+  background-image: url("../images/bg-landing.png");
+  background-size: cover;
+  background-position: center center;
+  background-repeat: repeat-y;
+  padding-top: 200px;
 }
 
-.section__title {
-  font-size: 80px;
-  line-height: 80px;
-  padding-bottom: 30px;
-  width: 500px;
-  margin-left: 50%;
-  transform: translateX(-50%);
-  text-align: center;
-  font-weight: bolder;
-  color: #FE93AF;
-  opacity: 0;
-}
-
-.section__line {
-  width: 125px;
-  border: 5px solid #FE93AF;
-  opacity: 0;
-}
-
-.section__content {
-  font-size: 20px;
-  line-height: 40px;
-  padding-top: 40px;
-  text-align: center;
+.section--introduce-remembers .section__title {
   opacity: 0;
 }
 
@@ -224,7 +265,7 @@
   border-radius: 100%;
   overflow: hidden;
   border: 1px solid #DDD;
-  box-shadow: 4px 4px 10px rgba(0, 0, 0, 0.349);
+  /* box-shadow: 4px 4px 10px rgba(0, 0, 0, 0.349); */
 }
 
 .profile__links {

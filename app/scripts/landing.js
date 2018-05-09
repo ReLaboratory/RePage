@@ -1,20 +1,40 @@
 window.onload = function() {
 
+  // scroll down button event
+  // in header
   var scrollDownIcon = document.querySelector('.header__scroll-down-button');
   scrollDownIcon.onclick = function() {
-    document.querySelector('.section').scrollIntoView({behavior: 'smooth'});
+    document.querySelector('.scroll-target').scrollIntoView({behavior: 'smooth'});
   }
-
-  var remembersAnimation = function(e) {
-    if(document.querySelector('.section--introduce-remembers').getBoundingClientRect().top <= 400) {
-      window.removeEventListener(e.type, remembersAnimation);
-      var remembers = document.querySelector('.section--introduce-remembers');
-      remembers.classList.add('animation--remembers');
+  
+  // navigation color animation
+  // in introduce-reliablers section
+  var reliablersSection = document.querySelector('.section--introduce-reliablers');
+  var navAni = document.querySelector('.for-bg-ani');
+  var navigationStyle = function(e) {
+    if(window.scrollY >= reliablersSection.offsetTop - 60
+       && window.scrollY <= reliablersSection.offsetHeight + reliablersSection.offsetTop) {
+      navAni.classList.add('introduce-reliablers-navigation');
+    } else {
+      navAni.classList.remove('introduce-reliablers-navigation');
     }
   }
 
+  // visual animation
+  // in introduce-remembers section
+  var remembersSection = document.querySelector('.section--introduce-remembers');
+  var remembersAnimation = function(e) {
+    if(remembersSection.getBoundingClientRect().top <= 400) {
+      window.removeEventListener(e.type, remembersAnimation);
+      remembersSection.classList.add('animation--remembers');
+    }
+  }
+
+  // add scroll event
+  window.addEventListener('scroll', navigationStyle);
   window.addEventListener('scroll', remembersAnimation);
-  
+
+  // particles library
   particlesJS('particles-js',
     {
       "particles": {
