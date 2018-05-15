@@ -200,7 +200,7 @@
   height: 100%;
   width: 50%;
   margin-left: 50%;
-  padding: 120px 300px 120px 0;
+  padding: 120px 12vw 120px 0;
   color: white;
   overflow-y: scroll;
 }
@@ -280,6 +280,10 @@
   width: 40px;
   height: 40px;
   margin: calc(50% - 20px) 5px 0 5px;
+}
+
+.profile__links img:hover {
+  filter: opacity(50%);
 }
 
 .remember__profile:hover .profile__links {
