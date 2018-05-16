@@ -46,14 +46,24 @@
   <main class="main">
     <aside class="aside">
       <h4 class="aside__title">index</h4>
-      <ul class="lecture__lists">
-        <li class="lecture__list">{{ lecture list }}</li>
+      <ul class="lecture-list">
+        <li class="lecture-list-item">
+          <a class="lecture-link" href="">{{ lecture list }}</a>
+        </li>
       </ul>
     </aside>
     <section class="article-container">
       <h2 class="article-title">{{ article title }}</h2>
       <hr class="article-line">
-      <iframe class="lecture-video-ifame"src="https://www.youtube.com/embed/Em74Uwyik0I" frameborder="0" allow="encrypted-media" allowfullscreen></iframe>
+      <div class="youtube-wrapper">
+        <iframe
+          class="youtube-iframe"
+          src="https://www.youtube.com/embed/CKlh1lwe2rY"
+          frameborder="0"
+          allow="encrypted-media"
+          allowfullscreen
+        ></iframe>
+      </div>
       <article class="article-contents">
         {{ contents }}
       </article>
