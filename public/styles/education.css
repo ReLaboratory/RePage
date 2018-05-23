@@ -141,6 +141,7 @@ body {
 @media (max-width:1200px) {
   .main {
     width: 100%;
+    padding-top: 50px;
   }
   .show-aside-button,
   .close-aside-button {
@@ -170,5 +171,11 @@ body {
     width: 90%;
     max-width: 800px;
     margin: 0% auto;
+  }
+  .article-title {
+    font-size: 30px;
+  }
+  .article-contents {
+    font-size: 17px;
   }
 }
