@@ -16,13 +16,11 @@
   <meta property="og:site_name" content="Re Page">
   <meta property="og:description" content="Group Re의 교육 프로젝트">
   <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
-  <!-- reset CSS -->
-  <link rel="stylesheet" href="styles/reset.css">
   <!-- common CSS -->
   <link rel="stylesheet" href="styles/commonStyle.css">
   <!-- education CSS -->
   <link rel="stylesheet" href="styles/education.css">
-  <script src="scripts/landing.js"></script>
+  <script src="scripts/education.js"></script>
 </head>
 <body>
   <header class="header">
@@ -44,8 +42,23 @@
     </nav>
   </header>
   <main class="main">
+    
+    <!-- responsibility elements -->
+    <div class="shadow-opacity"></div>
+    <button class="show-aside-button">
+      <div></div>
+      <div></div>
+      <div></div>
+    </button>
+    <!-- end -->
+
     <aside class="aside">
-      <h4 class="aside__title">index</h4>
+      <h4 class="aside__title">index
+        <button class="close-aside-button">
+          <div></div>
+          <div></div>
+        </button>
+      </h4>
       <ul class="lecture-list">
         <li class="lecture-list-item">
           <a class="lecture-link" href="">{{ lecture list }}</a>

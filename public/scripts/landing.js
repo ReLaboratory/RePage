@@ -2,16 +2,16 @@ window.onload = function() {
 
   // scroll down button event
   // in header
-  var scrollDownIcon = document.querySelector('.header__scroll-down-button');
+  const scrollDownIcon = document.querySelector('.header__scroll-down-button');
   scrollDownIcon.onclick = function() {
     document.querySelector('.scroll-target').scrollIntoView({behavior: 'smooth'});
   }
   
   // navigation color animation
   // in introduce-reliablers section
-  var reliablersSection = document.querySelector('.section--introduce-reliablers');
-  var navAni = document.querySelector('.for-bg-ani');
-  var navigationStyle = function(e) {
+  const reliablersSection = document.querySelector('.section--introduce-reliablers');
+  const navAni = document.querySelector('.for-bg-ani');
+  const navigationStyle = function(e) {
     if(window.scrollY >= reliablersSection.offsetTop - 60
        && window.scrollY <= reliablersSection.offsetHeight + reliablersSection.offsetTop) {
       navAni.classList.add('introduce-reliablers-navigation');
@@ -22,8 +22,8 @@ window.onload = function() {
 
   // visual animation
   // in introduce-remembers section
-  var remembersSection = document.querySelector('.section--introduce-remembers');
-  var remembersAnimation = function(e) {
+  const remembersSection = document.querySelector('.section--introduce-remembers');
+  const remembersAnimation = function(e) {
     if(remembersSection.getBoundingClientRect().top <= 400) {
       window.removeEventListener(e.type, remembersAnimation);
       remembersSection.classList.add('animation--remembers');

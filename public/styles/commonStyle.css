@@ -82,6 +82,7 @@ header {
   padding-top: 60px;
 }
 
+/* scrollbar start */
 ::-webkit-scrollbar-track {
 	-webkit-box-shadow: inset 0 0 6px rgba(0,0,0,0.3);
 	background-color: #F5F5F5;
@@ -96,6 +97,7 @@ header {
 	background-color: #ffffff;
 	border: 2px solid #adadad;
 }
+/* scrollbar end */
 
 .top-nav {
   color: white;
