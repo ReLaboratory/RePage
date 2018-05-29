@@ -59,8 +59,8 @@ body {
   top:10px;
   right: 0;
 }
-.close-aside-button>div:nth-child(1) {transform: rotateZ(45deg);}
-.close-aside-button>div:nth-child(2) {transform: rotateZ(135deg);}
+.close-aside-button>div:nth-child(1) {-webkit-transform: rotateZ(45deg);-ms-transform: rotate(45deg);transform: rotateZ(45deg);}
+.close-aside-button>div:nth-child(2) {-webkit-transform: rotateZ(135deg);-ms-transform: rotate(135deg);transform: rotateZ(135deg);}
 .main--active-show-aside .aside {
   left: 0;
 }
@@ -125,7 +125,8 @@ body {
   width: 100%;
   padding-bottom: 56.25%;
   border-radius: 20px;
-  box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.5);
+  -webkit-box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.5);
+          box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.5);
 }
 .youtube-iframe {
   position: absolute;
@@ -149,6 +150,8 @@ body {
   }
   .aside {
     position: fixed;
+    -webkit-transition: left 0.5s ease-in-out;
+    -o-transition: left 0.5s ease-in-out;
     transition: left 0.5s ease-in-out;
     width: 300px;
     top: 60px;
@@ -177,5 +180,14 @@ body {
   }
   .article-contents {
     font-size: 17px;
+  }
+}
+
+@media (max-width: 700px) {
+  .aside {
+    top: 45px;
+  }
+  .show-aside-button {
+    top: 55px;
   }
 }
