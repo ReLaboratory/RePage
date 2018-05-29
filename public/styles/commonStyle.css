@@ -138,3 +138,21 @@ header {
 .top-nav__link:hover a {
   background-color: rgba(255, 255, 255, 0.4);
 }
+
+@media (max-width: 700px) {
+  .top-nav {
+    font-size: 15px;
+    line-height: 15px;
+    padding: 5px 10px;
+    height: 45px;
+  }
+  .top-nav__logo img {
+    height: 25px;
+  }
+  .top-nav__link {
+    margin: 0 5px;
+  }
+  .top-nav__link a {
+    padding: 10px 10px;
+  }
+}
