@@ -1,13 +1,1 @@
-window.onload = function() {
-
-  const showAsideButton = document.querySelector('.show-aside-button');
-  const closeAsideButton = document.querySelector('.close-aside-button')
-  const shadow = document.querySelector('.shadow-opacity');
-  const mainElement = document.querySelector('.main');
-  // click button to show aside
-  showAsideButton.onclick = () => mainElement.classList.add('main--active-show-aside');
-  // click button to close aside
-  closeAsideButton.onclick = () => mainElement.classList.remove('main--active-show-aside');
-  // click shadow background to close aside
-  shadow.onclick = () => mainElement.classList.remove('main--active-show-aside');
-}
+"use strict";window.onload=function(){var a=document.querySelector(".show-aside-button"),b=document.querySelector(".close-aside-button"),c=document.querySelector(".shadow-opacity"),d=document.querySelector(".main");a.onclick=function(){return d.classList.add("main--active-show-aside")},b.onclick=function(){return d.classList.remove("main--active-show-aside")},c.onclick=function(){return d.classList.remove("main--active-show-aside")}};
