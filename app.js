@@ -1,10 +1,9 @@
 var createError = require('http-errors');
 var express = require('express');
 var path = require('path');
-var cookieParser = require('cookie-parser');
 var logger = require('morgan');
 
-// var educationRouter = require('./routes/education'); temporarily
+var educationRouter = require('./routes/education');
 
 var app = express();
 
@@ -18,7 +17,7 @@ app.use(express.urlencoded({ extended: false }));
 app.use(cookieParser());
 app.use(express.static(path.join(__dirname, 'public')));
 
-// app.use('/education', educationRouter); temporarily
+app.use('/education', educationRouter);
 
 // catch 404 and forward to error handler
 app.use(function(req, res, next) {
