@@ -57,7 +57,6 @@ header {
   color: white;
   font-size: 17px;
   line-height: 20px;
-  padding: 10px 50px;
   position: fixed;
   top: 0;
   z-index: 100;
@@ -66,6 +65,15 @@ header {
   background: -webkit-linear-gradient(left, #F4DE77, #FE93AF);
   background: -o-linear-gradient(left, #F4DE77, #FE93AF);
   background: linear-gradient(to right, #F4DE77, #FE93AF);
+}
+
+.for-bg-ani {
+  padding: 10px 50px;
+  width: 100%;
+  height: 60px;
+  -webkit-transition: 0.5s;
+  -o-transition: 0.5s;
+  transition: 0.5s; 
 }
 
 .top-nav__logo img {
@@ -98,9 +106,6 @@ header {
 }
 
 @media (max-width: 700px) {
-  .top-nav {
-    padding: 0;
-  }
   .for-bg-ani {
     font-size: 15px;
     line-height: 15px;
