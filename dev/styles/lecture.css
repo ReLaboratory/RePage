@@ -5,6 +5,7 @@ body {
 .main {
   padding-top: 100px;
   position: relative;
+  display: flex;
   width: 90%;
   max-width: 1240px;
   margin: 0 auto;
@@ -72,10 +73,7 @@ body {
 
 .aside {
   width: 240px;
-  position: absolute;
   top: 100px;
-  left: 0;
-  z-index: 10;
 }
 .aside__title {
   font-size: 30px;
@@ -105,10 +103,7 @@ body {
 }
 .article-container {
   width: 800px;
-  position: absolute;
-  top: 100px;
-  right: 0;
-  z-index: 10;
+  margin-left: 200px;
 }
 .article-title {
   text-align: center;

@@ -21,6 +21,7 @@
   <!-- landing CSS -->
   <link rel="stylesheet" href="styles/landing.css">
   <script src="scripts/landing.js"></script>
+  <script src="./scripts/particles.min.js"></script>
 </head>
 <body>
   <nav class="top-nav">
@@ -33,10 +34,7 @@
           <a href="../">introduce</a>
         </li>
         <li class="top-nav__link">
-          <a href="./education">education</a>
-        </li>
-        <li class="top-nav__link">
-          <a href="./contact">contact</a>
+          <a href="./edu">education</a>
         </li>
       </ul>
     </div>
@@ -48,10 +46,9 @@
       <button class="header__scroll-down-button">Research About Re</button>
     </div>
     <div id="particles-js"></div>
+    <div class="scroll-target"></div>
   </header>
-  <script src="./scripts/particles.min.js"></script>
 
-  <div class="scroll-target"></div>
   <main class="main">
     <section class="section section--introduce-reliablers">
       <div class="element-for-bg--night">
@@ -89,6 +86,22 @@
         Remembers는 각자 모두 다른 분야에서 최선을 다해 연구중입니다.<br/>
       </p>>
       <ul class="remembers">
+        <li class="remember">
+          <div class="remember__profile"><div class="profile__links">
+            <a href=""><img src="images/logo-github.svg" alt="github"></a>
+            <a href=""><img src="images/logo-facebook.svg" alt="facebook"></a>
+          </div></div>
+          <div class="remember__name">김원준</div>
+          <div class="remember__major">Web</div>
+        </li>
+        <li class="remember">
+          <div class="remember__profile"><div class="profile__links">
+            <a href=""><img src="images/logo-github.svg" alt="github"></a>
+            <a href=""><img src="images/logo-facebook.svg" alt="facebook"></a>
+          </div></div>
+          <div class="remember__name">나승채</div>
+          <div class="remember__major">Computer Architecture</div>
+        </li>
         <li class="remember">
           <div class="remember__profile"><div class="profile__links">
             <a href=""><img src="images/logo-github.svg" alt="github"></a>
@@ -140,6 +153,7 @@
       </ul>
     </section>
   </main>
+
   <footer class="footer">
     <p class="address-loc">대전광역시 유성구 가정북로 76(장동 23-9)</p>
     <p class="address-email">research.group.re@gmial.com</p>

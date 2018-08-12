@@ -15,11 +15,6 @@ time, mark, audio, video {
           box-sizing: border-box;
   box-sizing: border-box;
 }
-/* HTML5 display-role reset for older browsers */
-/* HTML5 hidden-attribute fix for newer browsers */
-*[hidden] {
-    display: none;
-}
 ol, ul {
 	list-style: none;
 }
@@ -103,6 +98,17 @@ header {
 
 .top-nav__link:hover a {
   background-color: rgba(255, 255, 255, 0.4);
+}
+
+/* footer */
+
+.footer {
+  text-align: center;
+  color: #535353;
+  font-size: 15px;
+  line-height: 25px;
+  padding: 40px 0 20px;
+  background-color: rgb(255, 223, 224);
 }
 
 @media (max-width: 700px) {

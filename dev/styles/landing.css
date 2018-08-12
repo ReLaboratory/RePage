@@ -280,6 +280,8 @@
 .animation--remembers .remember:nth-child(4) {-webkit-animation-delay: 1.6s;animation-delay: 1.6s;}
 .animation--remembers .remember:nth-child(5) {-webkit-animation-delay: 1.8s;animation-delay: 1.8s;}
 .animation--remembers .remember:nth-child(6) {-webkit-animation-delay: 2.0s;animation-delay: 2.0s;}
+.animation--remembers .remember:nth-child(7) {-webkit-animation-delay: 2.0s;animation-delay: 2.2s;}
+.animation--remembers .remember:nth-child(8) {-webkit-animation-delay: 2.0s;animation-delay: 2.4s;}
 
 .section--introduce-remembers {
   color: black;
@@ -297,14 +299,19 @@
 .remembers {
   font-size: 0;
   text-align: center;
-  padding-bottom: 250px;
+  padding-bottom: 100px;
+  display: flex;
+  width: 1000px;
+  flex-wrap: wrap;
+  justify-content: left;
+  margin: 50px auto;
 }
 
 .remember {
   opacity: 0;
   display: inline-block;
-  margin: 80px 2vw 0;
   position: relative;
+  width: 200px;
 }
 
 .remember__profile {
@@ -315,6 +322,7 @@
   border-radius: 100%;
   border: 1px solid #DDD;
   z-index: 5;
+  margin: 0 auto;
 }
 
 .remember:nth-child(1) .remember__profile {
@@ -339,6 +347,14 @@
 }
 .remember:nth-child(6) .remember__profile {
   background: url("../images/profile6") no-repeat center center;
+  background-size: cover;
+}
+.remember:nth-child(7) .remember__profile {
+  background: url("../images/profile7") no-repeat center center;
+  background-size: cover;
+}
+.remember:nth-child(8) .remember__profile {
+  background: url("../images/profile8") no-repeat center center;
   background-size: cover;
 }
 
@@ -374,21 +390,10 @@
 }
 
 .remember__major {
-  font-size: 25px;
+  font-size: 20px;
   font-weight: bolder;
   text-align: center;
-  padding-top: 10px;
-}
-
-/* footer */
-
-.footer {
-  text-align: center;
-  color: #535353;
-  font-size: 15px;
-  line-height: 25px;
-  padding: 40px 0 20px;
-  background-color: rgb(255, 223, 224);
+  padding: 10px 0 50px;
 }
 
 @media(max-width: 1300px) {
@@ -417,35 +422,53 @@
   .section--introduce-remembers {
     padding-top: 50px;
   }
+}
+@media (max-width: 1000px) {
   .remembers {
-    padding-bottom: 50px;
-    margin: 0 auto;
-    max-width: 1000px;
+    flex-direction: column;
+    padding: 0 10px;
+    justify-content: center;
+    width: auto;
   }
   .remember {
-    margin: 30px 5vw 0;
+    width: 100%;
+    max-width: 500px;
+    margin: 0 auto;
   }
-  .remember__name {
-    font-size: 20px;
-    padding-top: 70px;
+  .remember__profile {
+    margin: 0;
+    width: 100px;
+    height: 100px;
+    margin-bottom: 10px;
   }
-  .remember__major {
-    font-size: 18px;
-    padding-top: 10px;
-  }  
   .profile__links {
     background: none;
-    border-radius: 0;
-    height: 40px;
     opacity: 1;
+    height: 30px;
     position: absolute;
-    top: 160px;
-    z-index: 10;
-    width: 100%;
-    text-align: center;
-  }
+    top: 30px;
+    right: 0;
+    transition: none  ;
+    -webkit-transition: none  ;
+    -moz-transition: none  ;
+    -ms-transition: none  ;
+    -o-transition: none  ;
+}
   .profile__links img {
-    margin: 0 5px;
+    margin: 0;
+    height: 30px;
+  }
+  .remember__name {
+    font-size: 18px;
+    position: absolute;
+    top: 10px;
+    left: 120px;
+  }
+  .remember__major {
+    position: absolute;
+    font-size: 18px;
+    top: 40px;
+    left: 120px;
   }
 }
 @media (max-width: 800px) { 
@@ -494,40 +517,6 @@
     padding-top: 20px;
     text-align: center;
     opacity: 0;
-  }
-  .remember {
-    width: 100%;
-    display: block;
-    max-width: 500px;
-    margin: 30px auto;
-    padding: 0 10px;
-  }
-  .remember__profile {
-    width: 100px;
-    height: 100px;
-  }
-
-  .profile__links {
-    top: 30px;
-    right: 0px;
-    width: 150px;
-    text-align: right;
-  }
-  .remember__name, .remember__major {
-    width: 100px;
-    text-align: left;
-    z-index: 10;
-    padding-left: 30px;
-    position: absolute;
-    left: 100px;
-  }
-  .remember__name {
-    padding-top: 0;
-    top: 30px;
-  }
-  .remember__major {
-    width: 100px;
-    top: 40px;
   }
 }
 @media (max-width: 500px) { 
