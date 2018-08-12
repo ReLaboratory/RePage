@@ -1,15 +1,9 @@
-html, body, div, span, applet, object, iframe,
+html, body, div, span, iframe,
 h1, h2, h3, h4, h5, h6, p, blockquote, pre,
-a, abbr, acronym, address, big, cite, code,
-del, dfn, em, img, ins, kbd, q, s, samp,
-small, strike, strong, sub, sup, tt, var,
-b, u, i, center,
+a, address, code, img,
 dl, dt, dd, ol, ul, li,
-fieldset, form, label, legend,
-table, caption, tbody, tfoot, thead, tr, th, td,
-article, aside, canvas, details, embed,
-figure, figcaption, footer, header, hgroup,
-main, menu, nav, output, ruby, section, summary,
+article, aside, footer, header,
+main, menu, nav, section, summary,
 time, mark, audio, video {
 	margin: 0;
 	padding: 0;
@@ -22,38 +16,20 @@ time, mark, audio, video {
   box-sizing: border-box;
 }
 /* HTML5 display-role reset for older browsers */
-article, aside, details, figcaption, figure,
-footer, header, hgroup, main, menu, nav, section {
-	display: block;
-}
 /* HTML5 hidden-attribute fix for newer browsers */
 *[hidden] {
     display: none;
 }
-body {
-	line-height: 1;
-}
 ol, ul {
 	list-style: none;
-}
-blockquote, q {
-	quotes: none;
-}
-blockquote:before, blockquote:after,
-q:before, q:after {
-	content: '';
-	content: none;
-}
-table {
-	border-collapse: collapse;
-	border-spacing: 0;
 }
 a {
 	text-decoration: inherit;
 	color: inherit;
 }
 button {
-	outline: none;
+  outline: none;
+  border: none;
 }
 
 /* 서울남산 폰트 */
@@ -77,23 +53,6 @@ header {
   padding-top: 60px;
 }
 
-/* scrollbar start */
-::-webkit-scrollbar-track {
-	-webkit-box-shadow: inset 0 0 6px rgba(0,0,0,0.3);
-	background-color: #F5F5F5;
-}
-
-::-webkit-scrollbar {
-	width: 10px;
-	background-color: #F5F5F5;
-}
-
-::-webkit-scrollbar-thumb {
-	background-color: #ffffff;
-	border: 2px solid #adadad;
-}
-/* scrollbar end */
-
 .top-nav {
   color: white;
   font-size: 17px;
@@ -107,7 +66,6 @@ header {
   background: -webkit-linear-gradient(left, #F4DE77, #FE93AF);
   background: -o-linear-gradient(left, #F4DE77, #FE93AF);
   background: linear-gradient(to right, #F4DE77, #FE93AF);
-  height: 60px;
 }
 
 .top-nav__logo img {
@@ -141,6 +99,9 @@ header {
 
 @media (max-width: 700px) {
   .top-nav {
+    padding: 0;
+  }
+  .for-bg-ani {
     font-size: 15px;
     line-height: 15px;
     padding: 5px 10px;

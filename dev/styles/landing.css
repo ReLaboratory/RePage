@@ -501,15 +501,6 @@
   }
 }
 @media (max-width: 700px) {
-  .top-nav {
-    padding: 0px;
-  }
-  .for-bg-ani {
-    font-size: 15px;
-    line-height: 15px;
-    padding: 5px 10px;
-    height: 45px;
-  }
   .section__content {
     font-size: 13px;
     line-height: 25px;
