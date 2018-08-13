@@ -22,9 +22,9 @@ window.onload = () => {
   }
 
   const remembersSection = document.querySelector('.intro-remembers');
-  const remembersSlideAni = function ifScrollYisBiggerThanRemembersSectionAddAnimationClass(e) {
+  const remembersSlideAni = function ifScrollYisBiggerThanRemembersSectionAddAnimation(e) {
     if(remembersSection.getBoundingClientRect().top <= 400) {
-      window.removeEventListener(e.type, remembersAnimation);
+      window.removeEventListener(e.type, remembersSlideAni);
       remembersSection.classList.add('animation--remembers');
     }
   }
