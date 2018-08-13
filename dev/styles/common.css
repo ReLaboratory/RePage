@@ -143,9 +143,11 @@ button {
   font-weight: normal;
   font-style: normal;
 }
+/* 나눔바른고딕 폰트*/
+@import url(https://cdn.rawgit.com/openhiun/hangul/14c0f6faa2941116bb53001d6a7dcd5e82300c3f/nanumbarungothic.css);
 
 body {
-  font-family: 'SNJL';
+  font-family: 'Nanum Barun Gothic', sans-serif;
 }
 
 header {
@@ -330,22 +332,78 @@ header {
   background-color: #000;
 }
 
+.landing .intro {
+  padding: 50px 0 100px;;
+}
+
+.landing .intro__article {
+  width: 100%;
+  height: 300px;
+  display: flex;
+  margin-top: 50px;
+}
+
+.landing .intro__article--left {
+  flex-flow: row-reverse;
+}
+
+.landing .bg-img {
+  width: 50%;
+}
+
+.landing #bg1 {
+  background: url(../images/bg1.jpg) center center;
+  background-size: cover;
+  height: 100%;
+}
+
+.landing #bg2 {
+  background: url(../images/bg2.jpg) center center;
+  background-size: cover;
+  height: 100%;
+}
+
+.landing .section__paragraph {
+  font-size: 20px;
+  line-height: 30px;
+  width: 50%;
+  max-width: 600px;
+  padding: 50px;
+  font-family: 'SNJL';
+  transition: transform 0.3s;
+  -webkit-transition: transform 0.3s;
+  -moz-transition: transform 0.3s;
+  -ms-transition: transform 0.3s;
+  -o-transition: transform 0.3s;
+}
+
+.landing .intro__article:hover .section__paragraph {
+  transform: translateY(-20px);
+  -webkit-transform: translateY(-20px);
+  -moz-transform: translateY(-20px);
+  -ms-transform: translateY(-20px);
+  -o-transform: translateY(-20px);
+}
+
+/* section introduce-remembers */
+
 .landing .section__title {
   font-size: 80px;
   line-height: 80px;
   padding-bottom: 30px;
-  width: 500px;
-  margin: 0 auto;
+  width: 100%;
   text-align: center;
   font-weight: bolder;
   color: #000;
+  font-family: 'SNJL';
 }
 
 .landing .section__info {
   font-size: 20px;
   line-height: 40px;
-  padding-top: 40px;
+  padding: 10px 40px;
   text-align: center;
+  font-family: 'SNJL';
 }
 
 .landing .section__line {
@@ -361,8 +419,6 @@ header {
   text-align: center;
   opacity: 0;
 }
-
-/* section introduce-remembers */
 
 .landing .animation--remembers .section__title {-webkit-animation: fadeIn 1s forwards;animation: fadeIn 1s forwards;}
 .animation--remembers .section__line,
@@ -380,6 +436,7 @@ header {
 .landing .intro-remembers {
   color: black;
   padding-top: 200px;
+  font-family: 'SNJL';
 }
 
 .landing .intro-remembers .section__title {
@@ -497,17 +554,23 @@ header {
     font-size: 20px;
     line-height: 20px;
   }
-  .landing .section--introduce-reliablers {
-    padding: 30px;
+  .landing .intro {
+    padding-bottom: 50px;
   }
-  .landing .element-for-bg--rocket {
-    background-image: none;
+  .landing .intro__article {
+    flex-flow: column;
+    height: auto;
+    margin-top: 0;
   }
-  .landing .devided-container {
+  .landing .bg-img {
     width: 100%;
-    margin: 0;
-    padding: 50px 10%;
-    overflow: auto;
+    height: 300px !important;
+  }
+
+  .landing .section__paragraph {
+    width: 100%;
+    max-width: 700px;
+    margin: 0 auto;
   }
   .landing .intro-remembers {
     padding-top: 50px;
@@ -577,27 +640,6 @@ header {
     line-height: 15px;
     width: 200px;
     margin-left: -100px;
-  }
-  .landing .section--introduce-reliablers {
-    height: auto;
-    padding: 10px;
-  }
-  .landing .section__title {
-    font-size: 50px;
-    line-height: 50px;
-    padding-bottom: 30px;
-    width: 100%;
-    margin-left: 0;
-    -webkit-transform: none;
-        -ms-transform: none;
-            transform: none;
-  }
-  .landing .section__paragraph-title {
-    font-size: 20px;
-  }
-  .landing .section__paragraph {
-    font-size: 17px;
-    line-height: 25px;
   }
 }
 @media (max-width: 700px) {
