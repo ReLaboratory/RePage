@@ -15,18 +15,18 @@
   <meta property="og:type" content="website">
   <meta property="og:site_name" content="Re Page">
   <meta property="og:description" content="Group Re의 교육 프로젝트">
-  <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
+  <link rel="shortcut icon" href="../../favicon.ico" type="image/x-icon">
   <!-- common CSS -->
-  <link rel="stylesheet" href="styles/commonStyle.css">
+  <link rel="stylesheet" href="../../styles/commonStyle.css">
   <!-- education CSS -->
-  <link rel="stylesheet" href="styles/education.css">
-  <script src="scripts/education.js"></script>
+  <link rel="stylesheet" href="../../styles/education.css">
+  <script src="../../scripts/education.js"></script>
 </head>
 <body>
   <header class="header">
     <nav class="top-nav">
-      <a href="./index.html" class="top-nav__logo">
-        <img src="./images/logo-re.png" alt="Re logo">
+      <a href="../index.html" class="top-nav__logo">
+        <img src="../../images/logo-re.png" alt="Re logo">
       </a>
       <ul class="top-nav__links">
         <li class="top-nav__link">
@@ -60,25 +60,29 @@
         </button>
       </h4>
       <ul class="lecture-list">
+        <% for(let i = 0; i < lectures.length; i++){ %>
         <li class="lecture-list-item">
-          <a class="lecture-link" href="">{{ lecture list }}</a>
+              <a class="lecture-link" href="<%= i + 1 %>">
+                <%= lectures[i] %>
+              </a>
         </li>
+        <% } %>
       </ul>
     </aside>
     <section class="article-container">
-      <h2 class="article-title">{{ article title }}</h2>
+    <h2 class="article-title"><%= title %></h2>
       <hr class="article-line">
       <div class="youtube-wrapper">
         <iframe
           class="youtube-iframe"
-          src="https://www.youtube.com/embed/CKlh1lwe2rY"
+          src="<%= link %>"
           frameborder="0"
           allow="encrypted-media"
           allowfullscreen
         ></iframe>
       </div>
       <article class="article-contents">
-        {{ contents }}
+      <%= content %>
       </article>
     </section>
   </main>
