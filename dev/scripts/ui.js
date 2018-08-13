@@ -1,27 +1,26 @@
 window.onload = () => {
-
-  // scroll down button event
-  // in header
+  // landing ui script start
+  // scroll down button event in header
   const scrollDownIcon = document.querySelector('.header__scroll-down-button');
   scrollDownIcon.onclick = () => {
     document.querySelector('.scroll-target').scrollIntoView({behavior: 'smooth'});
   }
-  
-  // navigation color animation
-  // in introduce-reliablers section
+  // landing ui script end
+
+  // landing animation start
+  // navigation color ani in introduce-reliablers section
   const reliablersSection = document.querySelector('.section--introduce-reliablers');
   const navAni = document.querySelector('.for-bg-ani');
   const navigationStyle = (e) => {
     if(window.scrollY >= reliablersSection.offsetTop - 60
-       && window.scrollY <= reliablersSection.offsetHeight + reliablersSection.offsetTop) {
+      && window.scrollY <= reliablersSection.offsetHeight + reliablersSection.offsetTop) {
       navAni.classList.add('introduce-reliablers-navigation');
     } else {
       navAni.classList.remove('introduce-reliablers-navigation');
     }
   }
 
-  // visual animation
-  // in introduce-remembers section
+  // visual ani in introduce-remembers section
   const remembersSection = document.querySelector('.section--introduce-remembers');
   const remembersAnimation = (e) => {
     if(remembersSection.getBoundingClientRect().top <= 400) {
@@ -33,8 +32,9 @@ window.onload = () => {
   // add scroll event
   window.addEventListener('scroll', navigationStyle);
   window.addEventListener('scroll', remembersAnimation);
+  // landing animation end
 
-  // particles library
+  // particles library start
   particlesJS('particles-js',
     {
       "particles": {
@@ -152,6 +152,16 @@ window.onload = () => {
         "background_size": "cover"
       }
     }
-
   );
+  // particles library end
+
+  // lecture ui script start
+  const mainElement = document.querySelector('.main');
+  // click button to show aside
+  document.querySelector('.show-aside-button').onclick = () => mainElement.classList.add('main--active-show-aside');
+  // click button to close aside
+  document.querySelector('.close-aside-button').onclick = () => mainElement.classList.remove('main--active-show-aside');
+  // click shadow background to close aside
+  document.querySelector('.shadow-opacity').onclick = () => mainElement.classList.remove('main--active-show-aside');
+  // lecture ui script end
 }
