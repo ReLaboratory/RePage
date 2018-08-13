@@ -1,38 +1,36 @@
 window.onload = () => {
   // landing ui script start
-  // scroll down button event in header
   const scrollDownIcon = document.querySelector('.header__scroll-down-button');
-  scrollDownIcon.onclick = () => {
+  scrollDownIcon.onclick = function scrollDownToScrollTarget() {
     document.querySelector('.scroll-target').scrollIntoView({behavior: 'smooth'});
   }
   // landing ui script end
 
   // landing animation start
-  // navigation color ani in introduce-reliablers section
-  const reliablersSection = document.querySelector('.intro');
-  const navAni = document.querySelector('.for-bg-ani');
-  const CLASS_NAME = 'active-nav-ani';
-  const navigationStyle = (e) => {
-    if(window.scrollY >= reliablersSection.offsetTop - 60
-      && window.scrollY <= reliablersSection.offsetHeight + reliablersSection.offsetTop) {
-      navAni.classList.add(CLASS_NAME);
+  const intro = document.querySelector('.intro');
+  const header = document.querySelector('.header');
+  const particles = document.querySelector('#particles-js');
+  const CLASS_NAME = 'active-intro';
+  const naviColorAni = function ifScrollYIsBiggerThanIntroChangeColorAndDeleteParticles(e) {
+    if(window.scrollY >= intro.offsetTop - 60) {
+      document.body.classList.add(CLASS_NAME);
+      header.removeChild(particles);
     } else {
-      navAni.classList.remove(CLASS_NAME);
+      document.body.classList.remove(CLASS_NAME);
+      if (!document.querySelector('#particles-js')) header.appendChild(particles);
     }
   }
 
-  // visual ani in introduce-remembers section
-  const remembersSection = document.querySelector('.section--introduce-remembers');
-  const remembersAnimation = (e) => {
+  const remembersSection = document.querySelector('.intro-remembers');
+  const remembersSlideAni = function ifScrollYisBiggerThanRemembersSectionAddAnimationClass(e) {
     if(remembersSection.getBoundingClientRect().top <= 400) {
       window.removeEventListener(e.type, remembersAnimation);
       remembersSection.classList.add('animation--remembers');
     }
   }
 
-  // add scroll event
-  window.addEventListener('scroll', navigationStyle);
-  window.addEventListener('scroll', remembersAnimation);
+  window.addEventListener('scroll', naviColorAni);
+  window.addEventListener('scroll', remembersSlideAni);
   // landing animation end
 
   // particles library start
