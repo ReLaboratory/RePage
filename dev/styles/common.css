@@ -385,6 +385,80 @@ header {
   -o-transform: translateY(-20px);
 }
 
+/* section subject */
+
+.landing .subject-container {
+  display: flex;
+}
+
+.landing .subject {
+  font-family: "SNJL";
+  flex: 1;
+  display: block;
+  text-align: center;
+  height: 200px;
+  line-height: 200px;
+  font-size: 25px;
+  vertical-align: middle;
+  -webkit-transform: perspective(1px) translateZ(0);
+  transform: perspective(1px) translateZ(0);
+  box-shadow: 0 0 1px rgba(0, 0, 0, 0);
+  position: relative;
+  -webkit-transition-property: color, font-size;
+  transition-property: color, font-size;
+  -webkit-transition-duration: 0.5s, 0.3s;
+  transition-duration: 0.5s, 0.3s;
+}
+
+/* Hover.css */
+
+.landing .subject:before {
+  content: "";
+  position: absolute;
+  z-index: -1;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: #000;
+  -webkit-transform: scaleY(0);
+  transform: scaleY(0);
+  -webkit-transform-origin: 50% 100%;
+  transform-origin: 50% 100%;
+  -webkit-transition-property: transform;
+  transition-property: transform;
+  -webkit-transition-duration: 0.5s;
+  transition-duration: 0.5s;
+  -webkit-transition-timing-function: ease-out;
+  transition-timing-function: ease-out;
+}
+.landing .subject:hover, .subject:focus, .subject:active {
+  color: #fff;
+  font-size: 30px;
+  font-weight: bolder;
+}
+.landing .subject:hover:before, .subject:focus:before, .subject:active:before {
+  -webkit-transform: scaleY(1);
+  transform: scaleY(1);
+  -webkit-transition-timing-function: cubic-bezier(0.52, 1.64, 0.37, 0.66);
+  transition-timing-function: cubic-bezier(0.52, 1.64, 0.37, 0.66);
+}
+
+.landing .link-guide:after {
+  content: '클릭하면 이동합니다';
+  font-size: 16px;
+  color: #c2c2c2;
+  position: absolute;
+  bottom: 10px;
+  right: 0;
+  width: 100%;
+  display: block;
+  text-align: center;
+  z-index: 1;
+  line-height: 16px;
+  height: 16px;
+}
+
 /* section introduce-remembers */
 
 .landing .section__title {
@@ -435,7 +509,7 @@ header {
 
 .landing .intro-remembers {
   color: black;
-  padding-top: 200px;
+  padding-top: 50px;
   font-family: 'SNJL';
 }
 
@@ -572,11 +646,22 @@ header {
     max-width: 700px;
     margin: 0 auto;
   }
-  .landing .intro-remembers {
-    padding-top: 50px;
-  }
 }
 @media (max-width: 1000px) {
+  .landing .subject-container {
+    flex-flow: column;
+  }
+  .landing .subject {
+    margin: 10px;
+    box-shadow: 3px 3px 20px rgba(0, 0, 0, 0.459);
+    height: 70px;
+    line-height: 70px;
+  }
+  .landing .link-guide:after {
+    top: 30px;
+    right: 10px;
+    width: 150px;
+  }
   .landing .remembers {
     flex-direction: column;
     padding: 0 10px;
