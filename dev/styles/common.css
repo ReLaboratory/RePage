@@ -756,7 +756,7 @@ header {
 
 /* lectre start -------------------------------------> */
 
-.lecture .main {
+.lecture.main {
   background-color: #fafafa;
   padding-top: 100px;
   position: relative;
