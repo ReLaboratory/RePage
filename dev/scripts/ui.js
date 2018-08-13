@@ -9,14 +9,15 @@ window.onload = () => {
 
   // landing animation start
   // navigation color ani in introduce-reliablers section
-  const reliablersSection = document.querySelector('.section--introduce-reliablers');
+  const reliablersSection = document.querySelector('.intro');
   const navAni = document.querySelector('.for-bg-ani');
+  const CLASS_NAME = 'active-nav-ani';
   const navigationStyle = (e) => {
     if(window.scrollY >= reliablersSection.offsetTop - 60
       && window.scrollY <= reliablersSection.offsetHeight + reliablersSection.offsetTop) {
-      navAni.classList.add('introduce-reliablers-navigation');
+      navAni.classList.add(CLASS_NAME);
     } else {
-      navAni.classList.remove('introduce-reliablers-navigation');
+      navAni.classList.remove(CLASS_NAME);
     }
   }
 

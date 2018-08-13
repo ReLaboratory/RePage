@@ -326,13 +326,8 @@ header {
 
 /*  section introduce-reliablers */
 
-.landing .section--introduce-reliablers {
-  height: calc(100vh - 60px);
-  padding: 50px;
-}
-
-.introduce-reliablers-navigation {
-  background-color: #abafde;
+.active-nav-ani {
+  background-color: #000;
 }
 
 .landing .section__title {
@@ -349,9 +344,16 @@ header {
   color: #FE93AF;
 }
 
+.landing .section__info {
+  font-size: 20px;
+  line-height: 40px;
+  padding-top: 40px;
+  text-align: center;
+}
+
 .landing .section__line {
   width: 125px;
-  border: 5px solid #FE93AF;
+  border: 3px solid #FE93AF;
   opacity: 0;
 }
 
@@ -361,45 +363,6 @@ header {
   padding-top: 40px;
   text-align: center;
   opacity: 0;
-}
-
-.landing .element-for-bg--night {
-  height: 100%;
-  background: url(../images/bg-night.png) no-repeat;
-  background-size: cover;
-  background-position: center center;
-  box-shadow: 5px 5px 25px rgba(0, 0, 0, 0.5);
-}
-.landing .element-for-bg--rocket {
-  height: 100%;
-  background: url(../images/rocket.png) no-repeat;
-  background-size: 400px;
-  background-position: 9vw 6vw;
-  -webkit-animation: float 2s ease-in-out infinite;
-          animation: float 2s ease-in-out infinite;
-}
-
-.landing .devided-container {
-  height: 100%;
-  width: 50%;
-  margin-left: 50%;
-  padding: 120px 12vw 120px 0;
-  color: black;
-  overflow-y: scroll;
-}
-
-.landing .section__paragraph-title {
-  margin-top: 20px;
-  font-size: 25px;
-  font-weight: bolder;
-  line-height: 40px;
-  text-transform: uppercase;
-}
-
-.landing .section__paragraph {
-  margin-bottom: 20px;
-  font-size: 20px;
-  line-height: 30px;
 }
 
 /* section introduce-remembers */
@@ -419,10 +382,6 @@ header {
 
 .landing .section--introduce-remembers {
   color: black;
-  background-image: url("../images/bg-landing.png");
-  background-size: cover;
-  background-position: center center;
-  background-repeat: repeat-y;
   padding-top: 200px;
 }
 
@@ -673,7 +632,7 @@ header {
 
 /* lectre start -------------------------------------> */
 
-.lecture.main {
+.lecture .main {
   background-color: #fafafa;
   padding-top: 100px;
   position: relative;
