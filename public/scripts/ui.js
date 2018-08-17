@@ -1,40 +1,39 @@
 window.onload = () => {
-
-  // scroll down button event
-  // in header
+  // landing ui script start
   const scrollDownIcon = document.querySelector('.header__scroll-down-button');
-  scrollDownIcon.onclick = () => {
+  scrollDownIcon.onclick = function scrollDownToScrollTarget() {
     document.querySelector('.scroll-target').scrollIntoView({behavior: 'smooth'});
   }
-  
-  // navigation color animation
-  // in introduce-reliablers section
-  const reliablersSection = document.querySelector('.section--introduce-reliablers');
-  const navAni = document.querySelector('.for-bg-ani');
-  const navigationStyle = (e) => {
-    if(window.scrollY >= reliablersSection.offsetTop - 60
-       && window.scrollY <= reliablersSection.offsetHeight + reliablersSection.offsetTop) {
-      navAni.classList.add('introduce-reliablers-navigation');
+  // landing ui script end
+
+  // landing animation start
+  const intro = document.querySelector('.intro');
+  const header = document.querySelector('.header');
+  const particles = document.querySelector('#particles-js');
+  const CLASS_NAME = 'active-intro';
+  const naviColorAni = function ifScrollYIsBiggerThanIntroChangeColorAndDeleteParticles(e) {
+    if(window.scrollY >= intro.offsetTop - 60) {
+      document.body.classList.add(CLASS_NAME);
+      header.removeChild(particles);
     } else {
-      navAni.classList.remove('introduce-reliablers-navigation');
+      document.body.classList.remove(CLASS_NAME);
+      if (!document.querySelector('#particles-js')) header.appendChild(particles);
     }
   }
 
-  // visual animation
-  // in introduce-remembers section
-  const remembersSection = document.querySelector('.section--introduce-remembers');
-  const remembersAnimation = (e) => {
+  const remembersSection = document.querySelector('.intro-remembers');
+  const remembersSlideAni = function ifScrollYisBiggerThanRemembersSectionAddAnimation(e) {
     if(remembersSection.getBoundingClientRect().top <= 400) {
-      window.removeEventListener(e.type, remembersAnimation);
+      window.removeEventListener(e.type, remembersSlideAni);
       remembersSection.classList.add('animation--remembers');
     }
   }
 
-  // add scroll event
-  window.addEventListener('scroll', navigationStyle);
-  window.addEventListener('scroll', remembersAnimation);
+  window.addEventListener('scroll', naviColorAni);
+  window.addEventListener('scroll', remembersSlideAni);
+  // landing animation end
 
-  // particles library
+  // particles library start
   particlesJS('particles-js',
     {
       "particles": {
@@ -152,6 +151,16 @@ window.onload = () => {
         "background_size": "cover"
       }
     }
-
   );
+  // particles library end
+
+  // lecture ui script start
+  const mainElement = document.querySelector('.main');
+  // click button to show aside
+  document.querySelector('.show-aside-button').onclick = () => mainElement.classList.add('main--active-show-aside');
+  // click button to close aside
+  document.querySelector('.close-aside-button').onclick = () => mainElement.classList.remove('main--active-show-aside');
+  // click shadow background to close aside
+  document.querySelector('.shadow-opacity').onclick = () => mainElement.classList.remove('main--active-show-aside');
+  // lecture ui script end
 }

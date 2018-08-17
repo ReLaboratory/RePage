@@ -4,91 +4,115 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
-  <meta name="description" content="믿을 수 있는 연구 중심 Team Re">
+  <meta name="description" content="전공동아리 Re">
   <meta name="keywords" content="연구, 웹, IOT, 임베디드, 디자인, 시스템, 포렌식, 네트워크, 교육 프로젝트, Reliablers, Re, Reliablers Education, 전공동아리, 대덕소프트웨어마이스터고">
-  <meta name="author" content="Junmo Yeon">
-  <title>Re Page</title>
+  <meta name="author" content="Yeondoo">
+  <title>Re</title>
   <!-- End Google Tag Manager -->
 	<meta property="og:title" content="Re Page">
 	<meta property="og:image" content="">
   <meta property="og:url" content="">
   <meta property="og:type" content="website">
   <meta property="og:site_name" content="Re Page">
-  <meta property="og:description" content="대덕SW마이스터고등학교의 전공동아리로 시작한 Re<br>연구중심동아리로, 여러 분야에서 프로젝트를 진행하고, 단체 프로젝트로 교육 강의 영상을 제작하고 있습니다.">
+  <meta property="og:description" content="대덕SW마이스터고등학교의 전공동아리 Re<br/> 여러 분야에서 프로젝트를 진행하고, 단체 프로젝트로 교육 강의 영상을 제작하고 있습니다.">
   <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
-  <!-- common CSS -->
-  <link rel="stylesheet" href="styles/commonStyle.css">
-  <!-- landing CSS -->
-  <link rel="stylesheet" href="styles/landing.css">
-  <script src="scripts/landing.js"></script>
+  <link rel="stylesheet" href="styles/common.css">
+  <script src="scripts/ui.js"></script>
+  <script src="./scripts/particles.min.js"></script>
 </head>
 <body>
-  <header class="header">
-    <nav class="top-nav">
-      <div class="for-bg-ani">
-        <a href="./landing.html" class="top-nav__logo">
-          <img src="./images/logo-re.png" alt="Re logo">
-        </a>
-        <ul class="top-nav__links">
-          <li class="top-nav__link">
-            <a href="../">introduce</a>
-          </li>
-          <li class="top-nav__link">
-            <a href="./education">education</a>
-          </li>
-          <li class="top-nav__link">
-            <a href="./contact">contact</a>
-          </li>
-        </ul>
-      </div>
-    </nav>
-    <div class="header__container">
-      <h1 class="header__title">research eagerly</h1>
-      <h3 class="header__subtitle">welcome to re</h3>
-      <button class="header__scroll-down-button">Research About Re</button>
+  <nav class="top-nav">
+    <div class="for-bg-ani">
+      <a href="./landing.html" class="top-nav__logo">
+        <img src="./images/logo-re.png" alt="Re logo">
+      </a>
+      <ul class="top-nav__links">
+        <li class="top-nav__link">
+          <a href="../">introduce</a>
+        </li>
+        <li class="top-nav__link">
+          <a href="#lecture">lecture</a>
+        </li>
+      </ul>
     </div>
-    <div id="particles-js"></div>
-  </header>
-  <script src="./scripts/particles.min.js"></script>
+  </nav>
 
-  <div class="scroll-target"></div>
-  <main class="main">
-    <section class="section section--introduce-reliablers">
-      <div class="element-for-bg--night">
-        <div class="element-for-bg--rocket">
-          <article class="devided-container">
-            <h2 class="section__title">Reliablers</b></h2>
-            <h4 class="section__paragraph-title">summary</h4>
-            <p class="section__paragraph">
-              Group Re는 현재 대덕SW마이스터고등학교의 전공동아리로 속해있으며, 
-              다양한 분야의 학생들이 각자의 연구와 계발을 위해 만들어진 그룹입니다. 
-              Re의 전체 이름은 Reliablers입니다. 
-              약자로 Re를 사용하여 접두사의 뜻을 지닙니다. 
-              Re라는 접두사가 다른 단어와 조합해 새로운 단어가 만들어지듯이, 
-              Re의 동아리원들은 서로 융합하고 협력합니다. 
-            </p>
-            <h4 class="section__paragraph-title">purpose</h4>
-            <p class="section__paragraph">
-              단순히 학교 내의 전공동아리 활동에서 성과를 도출하기 위한 그룹이 아니며, 
-              개인의 발전과, 서로 융합하여 발전하는 것이 목적입니다. 
-              학교에서는 연구 중심 동아리라는 것이 다른 동아리와의 차별점이지만, 
-              우리가 최고가 아니라는 것을 늘 깨닫고 자만하지 않습니다. 
-              자신이 배우고자하는 부분을 연구하며 개인프로젝트를 진행하고, 
-              융합하고 싶은 멤버끼리 함께 융합프로젝트를 진행합니다.
-            </p>
-          </article>
-        </div>
+  <main class="main landing">
+    <header class="header">
+      <div class="header__container">
+        <h1 class="header__title"><b style="color:#ebebeb">re</b>liablers</h1>
+        <h3 class="header__subtitle">welcome to re</h3>
+        <button class="header__scroll-down-button">Research About Re</button>
+      </div>
+      <div id="particles-js"></div>
+      <div class="scroll-target"></div>
+    </header>
+
+    <section class="section intro">
+      <h2 class="section__title">Reliablers</b></h2>
+      <article class="intro__article intro__article--right">
+        <div class="bg-img" id="bg1"></div>
+        <p class="section__paragraph">
+          Group Re는 현재 대덕SW마이스터고등학교의 전공동아리로 속해있으며, 
+          다양한 분야의 학생들이 각자의 연구와 계발을 위해 만들어진 그룹입니다. 
+          Re의 전체 이름은 Reliablers입니다.
+          약자로 Re를 사용하여 접두사의 뜻을 지닙니다.
+          Re라는 접두사는 다른 단어와 조합해 새로운 단어가 만들어지듯이, 
+          구성원들은 서로 융합하고 협력한다는 뜻을 가지고있습니다.
+        </p>
+      </article>
+      <article class="intro__article intro__article--left">
+        <div class="bg-img" id="bg2"></div>
+        <p class="section__paragraph">
+          단순히 학교 내의 전공동아리 활동에서 성과를 도출하기 위한 그룹이 아니며
+          개인의 발전과 서로 융합하여 발전하는 것이 목적입니다.
+          자신이 배우고자하는 부분을 연구하며 개인프로젝트를 진행하고,
+          융합하고 싶은 멤버끼리 함께 융합프로젝트를 진행합니다.
+        </p>
+      </article>
+    </section>
+
+    <section class="section lecture" id="lecture">
+      <h2 class="section__title">Re education</h2>
+      <p class="section__info">
+        Re 동아리의 교육 프로젝트<br>
+        프로그래밍을 입문하고자하는 모든 사람들에게 무료 강의를 제공합니다<br>
+        <br>
+        강의목록
+      </p>
+      <div class="subject-container">
+        <a href="#" class="subject">C언어<span class="link-guide"></span></a>
+        <a href="#" class="subject">아두이노<span class="link-guide"></span></a>
+        <a href="#" class="subject">컴퓨터 아키텍쳐<span class="link-guide"></span></a>
+        <a href="#" class="subject">Node.js<span class="link-guide"></span></a>
+        <a href="#" class="subject">웹 퍼블리싱<span class="link-guide"></span></a>
+        <a href="#" class="subject">디자인<span class="link-guide"></span></a>
       </div>
     </section>
-    <section class="section section--introduce-remembers">
-      <h2 class="section__title">Re<b style="color:black;">members</b></h2>
+
+    <section class="section intro-remembers">
+      <h2 class="section__title">Re<b style="color:#252525;">members</b></h2>
       <hr class="section__line">
       <p class="section__content">
-        Re는 구성원들간에 서로를 부르는 호칭이 있습니다.<br/>
-        우리 Group Re의 멤버라 지칭하여 'Remeber'라고 합니다.<br/>
-        Remembers는 각자 모두 다른 분야에서 최선을 다해 연구중입니다.<br/>
+        구성원들은 Re의 멤버, 'Remember'라고 호칭합니다.<br/>
       </p>>
       <ul class="remembers">
+        <li class="remember">
+          <div class="remember__profile"><div class="profile__links">
+            <a href=""><img src="images/logo-github.svg" alt="github"></a>
+            <a href=""><img src="images/logo-facebook.svg" alt="facebook"></a>
+          </div></div>
+          <div class="remember__name">김원준</div>
+          <div class="remember__major">Web</div>
+        </li>
+        <li class="remember">
+          <div class="remember__profile"><div class="profile__links">
+            <a href=""><img src="images/logo-github.svg" alt="github"></a>
+            <a href=""><img src="images/logo-facebook.svg" alt="facebook"></a>
+          </div></div>
+          <div class="remember__name">나승채</div>
+          <div class="remember__major">Computer Architecture</div>
+        </li>
         <li class="remember">
           <div class="remember__profile"><div class="profile__links">
             <a href=""><img src="images/logo-github.svg" alt="github"></a>
@@ -140,9 +164,10 @@
       </ul>
     </section>
   </main>
+
   <footer class="footer">
     <p class="address-loc">대전광역시 유성구 가정북로 76(장동 23-9)</p>
-    <p class="address-email">research.group.re@gmial.com</p>
+    <p class="address-email">research.group.re@gmail.com</p>
     <p class="address-copyright">ⓒ Reliablers, 2018</p>
   </footer>
 </body>
