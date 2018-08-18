@@ -6,7 +6,7 @@ const subject = new mongoose.Schema({
         no: Number,
         title: String,
         content: String,
-        link: String
+        src: String
     }]
 });
 
