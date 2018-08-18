@@ -57,29 +57,25 @@
         </button>
       </h4>
       <ul class="lecture-list">
-        <% for(let i = 0; i < lectures.length; i++){ %>
         <li class="lecture-list-item">
-              <a class="lecture-link" href="<%= i + 1 %>">
-                <%= lectures[i] %>
-              </a>
+          <a class="lecture-link" href="">{{ lecture list }}</a>
         </li>
-        <% } %>
       </ul>
     </aside>
     <section class="article-container">
-    <h2 class="article-title"><%= title %></h2>
+      <h2 class="article-title">{{ article title }}</h2>
       <hr class="article-line">
       <div class="youtube-wrapper">
         <iframe
           class="youtube-iframe"
-          src="<%= link %>"
+          src="https://www.youtube.com/embed/CKlh1lwe2rY"
           frameborder="0"
           allow="encrypted-media"
           allowfullscreen
         ></iframe>
       </div>
       <article class="article-contents">
-      <%= content %>
+        {{ contents }}
       </article>
     </section>
   </main>
