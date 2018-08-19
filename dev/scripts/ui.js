@@ -1,8 +1,28 @@
+const setEduComponent = function() {
+  const xhr = new XMLHttpRequest();
+  xhr.onload = () => {
+    if(xhr.status === 200) {
+      const view = document.querySelector('.view');
+      view.innerHTML = xhr.responseText;
+    } else {
+      console.error(xhr.responseText);
+    }
+  }
+  xhr.open('GET', '');
+  xhr.send();
+}
+
 window.onload = () => {
   // landing ui script start
   const scrollDownIcon = document.querySelector('.header__scroll-down-button');
   scrollDownIcon.onclick = function scrollDownToScrollTarget() {
     document.querySelector('.scroll-target').scrollIntoView({behavior: 'smooth'});
+  }
+  const subject = document.getElementsByClassName('subject');
+  for(let i = 0; i<subject.length; i++) {
+    subject[i].onclick = () => {
+      setEduComponent();
+    }
   }
   // landing ui script end
 
@@ -33,7 +53,7 @@ window.onload = () => {
   window.addEventListener('scroll', remembersSlideAni);
   // landing animation end
 
-  // particles library start
+  // particles library
   particlesJS('particles-js',
     {
       "particles": {
@@ -152,15 +172,4 @@ window.onload = () => {
       }
     }
   );
-  // particles library end
-
-  // lecture ui script start
-  const mainElement = document.querySelector('.main');
-  // click button to show aside
-  document.querySelector('.show-aside-button').onclick = () => mainElement.classList.add('main--active-show-aside');
-  // click button to close aside
-  document.querySelector('.close-aside-button').onclick = () => mainElement.classList.remove('main--active-show-aside');
-  // click shadow background to close aside
-  document.querySelector('.shadow-opacity').onclick = () => mainElement.classList.remove('main--active-show-aside');
-  // lecture ui script end
 }

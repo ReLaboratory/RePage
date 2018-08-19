@@ -394,7 +394,8 @@ header {
 .landing .subject {
   font-family: "SNJL";
   flex: 1;
-  display: block;
+  background: none;
+  cursor: pointer;
   text-align: center;
   height: 200px;
   line-height: 200px;
