@@ -1,4 +1,4 @@
-const setEduComponent = function() {
+const setEduComponent = function(uri) {
   const xhr = new XMLHttpRequest();
   xhr.onload = () => {
     if(xhr.status === 200) {
@@ -8,9 +8,24 @@ const setEduComponent = function() {
       console.error(xhr.responseText);
     }
   }
-  xhr.open('GET', '');
+  xhr.open('GET', uri);
   xhr.send();
 }
+
+// TODO
+// const updateData = function(uri) {
+//   const xhr = new XMLHttpRequest();
+//   xhr.onload = () => {
+//     if(xhr.status === 200) {
+//       const data = JSON.parse(xhr.responseText);
+//       lectureLink = document.getElementsByClassName('lecture-link');
+//     } else {
+//       console.error(xhr.responseText);
+//     }
+//   }
+//   xhr.open('GET', uri);
+//   xhr.send();
+// }
 
 window.onload = () => {
   // landing ui script start
@@ -21,7 +36,8 @@ window.onload = () => {
   const subject = document.getElementsByClassName('subject');
   for(let i = 0; i<subject.length; i++) {
     subject[i].onclick = () => {
-      setEduComponent();
+      setEduComponent(`${location.protocol}//${location.host}/edu`);
+      // updateData('');
     }
   }
   // landing ui script end
