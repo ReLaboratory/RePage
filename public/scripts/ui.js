@@ -25,6 +25,8 @@ const setLectureLink = function(uri) {
           updateData(`${location.protocol}//${location.host}/edu/${el.value}/${i + 1}`);
         }
         lectureLink.innerText = data.titles[i];
+
+        lectureList.appendChild(lectureLink);
       }
     } else {
       console.error(xhr.responseText);
@@ -40,13 +42,13 @@ const updateData = function(uri) {
     if(xhr.status === 200) {
       const data = JSON.parse(xhr.responseText);
 
-      title = document.querySelector('article-title');
+      title = document.querySelector('.article-title');
       title.innerText = data.index;
 
-      iframe = document.querySelector('youtube-iframe');
+      iframe = document.querySelector('.youtube-iframe');
       iframe.src = data.src;
 
-      content = document.querySelector('article-contents');
+      content = document.querySelector('.article-contents');
       content.innerText = data.content;
     } else {
       console.error(xhr.responseText);
