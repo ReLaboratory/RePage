@@ -507,6 +507,7 @@ header {
 .landing .animation--remembers .remember:nth-child(6) {-webkit-animation-delay: 2.0s;animation-delay: 2.0s;}
 .landing .animation--remembers .remember:nth-child(7) {-webkit-animation-delay: 2.0s;animation-delay: 2.2s;}
 .landing .animation--remembers .remember:nth-child(8) {-webkit-animation-delay: 2.0s;animation-delay: 2.4s;}
+.landing .animation--remembers .remember:nth-child(9) {-webkit-animation-delay: 2.0s;animation-delay: 2.6s;}
 
 .landing .intro-remembers {
   color: black;
@@ -577,6 +578,10 @@ header {
 }
 .landing .remember:nth-child(8) .remember__profile {
   background: url("../images/profile8") no-repeat center center;
+  background-size: cover;
+}
+.landing .remember:nth-child(9) .remember__profile {
+  background: url("../images/profile9") no-repeat center center;
   background-size: cover;
 }
 
