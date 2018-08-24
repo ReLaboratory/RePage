@@ -32,8 +32,8 @@ router.get('/:subject/:no', async (req, res) => {
   try {
     const subjectObj = await Subject.findOne({ name: subject });
     if (subjectObj == null || subjectObj.lectures[no] == null)
-      return res.status(404).end();
-      
+    return res.status(404).end();
+    
     res.status(200).json({
       index: no - 1,
       content: subjectObj.lectures[no - 1].content,

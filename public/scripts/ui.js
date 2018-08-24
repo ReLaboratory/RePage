@@ -12,20 +12,49 @@ const setEduComponent = function(uri) {
   xhr.send();
 }
 
-// TODO
-// const updateData = function(uri) {
-//   const xhr = new XMLHttpRequest();
-//   xhr.onload = () => {
-//     if(xhr.status === 200) {
-//       const data = JSON.parse(xhr.responseText);
-//       lectureLink = document.getElementsByClassName('lecture-link');
-//     } else {
-//       console.error(xhr.responseText);
-//     }
-//   }
-//   xhr.open('GET', uri);
-//   xhr.send();
-// }
+const setLectureLink = function(uri) {
+  const xhr = new XMLHttpRequest();
+  xhr.onload = () => {
+    if(xhr.status === 200) {
+      const data = JSON.parse(xhr.responseText);
+      const lectureList = document.querySelector('.lecture-list-item');
+      for(i in data.titles) {
+        let lectureLink = document.createElement('div');
+        lectureLink.classList.add('lecture-link');
+        lectureLink.onclick = () => {
+          updateData(`${location.protocol}//${location.host}/edu/${el.value}/${i + 1}`);
+        }
+        lectureLink.innerText = data.titles[i];
+      }
+    } else {
+      console.error(xhr.responseText);
+    }
+  }
+  xhr.open('GET', uri);
+  xhr.send();
+}
+
+const updateData = function(uri) {
+  const xhr = new XMLHttpRequest();
+  xhr.onload = () => {
+    if(xhr.status === 200) {
+      const data = JSON.parse(xhr.responseText);
+
+      title = document.querySelector('article-title');
+      title.innerText = data.index;
+
+      iframe = document.querySelector('youtube-iframe');
+      iframe.src = data.src;
+
+      content = document.querySelector('article-contents');
+      content.innerText = data.content;
+    } else {
+      console.error(xhr.responseText);
+    }
+  }
+  xhr.open('GET', uri);
+  xhr.send();
+}
 
 window.onload = () => {
   // landing ui script start
@@ -34,10 +63,11 @@ window.onload = () => {
     document.querySelector('.scroll-target').scrollIntoView({behavior: 'smooth'});
   }
   const subject = document.getElementsByClassName('subject');
-  for(let i = 0; i<subject.length; i++) {
-    subject[i].onclick = () => {
+  for(el of subject) {
+    el.onclick = () => {
       setEduComponent(`${location.protocol}//${location.host}/edu`);
-      // updateData('');
+      setLectureLink(`${location.protocol}//${location.host}/edu/${el.value}}`);
+      updateData(`${location.protocol}//${location.host}/edu/${el.value}/1`);
     }
   }
   // landing ui script end
