@@ -2,7 +2,16 @@ const express = require('express');
 const Subject = require('../model/subject');
 const router = express.Router();
 
-router.get('/', (req, res, next) => res.status(200).send(/*TODO: edu 컴포넌트 전송*/));
+router.get('/', (req, res) => {
+  require('fs').readFile('../public/lecture.html', (err, data) => {
+    if(err)
+    {
+      console.log(err);
+      return res.status(500).end();
+    }
+    res.status(200).send(data);
+  });
+});
 router.get('/:subject/:no', async (req, res) => {
   const { subject, no } = req.params;
 
