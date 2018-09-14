@@ -16,20 +16,20 @@
   <meta property="og:site_name" content="Re Page">
   <meta property="og:description" content="대덕SW마이스터고등학교의 전공동아리 Re<br/> 여러 분야에서 프로젝트를 진행하고, 단체 프로젝트로 교육 강의 영상을 제작하고 있습니다.">
   <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
-  <link rel="stylesheet" href="styles/common.css">
+  <link rel="stylesheet" href="styles/style.css">
 </head>
 <body>
   <nav class="top-nav">
     <div class="for-bg-ani">
-      <a href="/" class="top-nav__logo">
+      <a href="/" class="top-nav__logo link">
         <img src="./images/logo-re.png" alt="Re logo">
       </a>
       <ul class="top-nav__list">
         <li class="top-nav__item">
-          <a class="top-nav__link" href="/">intro</a>
+          <a class="top-nav__link link" href="/">intro</a>
         </li>
         <li class="top-nav__item">
-          <a class="top-nav__link" href="/select">lecture</a>
+          <a class="top-nav__link link" href="/select">lecture</a>
         </li>
       </ul>
     </div>
@@ -37,11 +37,14 @@
 
   <!-- pjax -->
   <div id="app"></div>
-
+  
   <footer class="footer">
     <p class="address-loc">대전광역시 유성구 가정북로 76(장동 23-9)</p>
     <p class="address-email">research.group.re@gmail.com</p>
     <p class="address-copyright">ⓒ Reliablers, 2018</p>
   </footer>
+  
+  <script src="./scripts/router.js"></script>
+  <script src="../scripts/particles.min.js"></script>
 </body>
 </html>
