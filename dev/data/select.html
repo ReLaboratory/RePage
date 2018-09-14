@@ -1,0 +1,112 @@
+<section class="section lecture" id="lecture">
+  <h2 class="section__title">Re education</h2>
+  <p class="section__info">
+    Re 동아리의 교육 프로젝트<br>
+    프로그래밍을 입문하고자하는 모든 사람들에게 무료 강의를 제공합니다<br>
+    <br>
+    강의목록
+  </p>
+  <div class="subject-container">
+    <a href="/edu/c언어" class="subject">C언어<span class="link-guide"></span></a>
+    <a href="/edu/아두이노" class="subject">아두이노<span class="link-guide"></span></a>
+    <a href="/edu/컴퓨터아키텍쳐" class="subject">컴퓨터 아키텍쳐<span class="link-guide"></span></a>
+    <a href="/edu/nodejs" class="subject">Node.js<span class="link-guide"></span></a>
+    <a href="/edu/웹퍼블리싱" class="subject">웹 퍼블리싱<span class="link-guide"></span></a>
+    <a href="/edu/디자인" class="subject">디자인<span class="link-guide"></span></a>
+  </div>
+</section>
+
+<style>
+
+/* section subject */
+
+.subject-container { 
+  display: flex;
+}
+
+.subject {
+  font-family: "SNJL";
+  flex: 1;
+  background: none;
+  cursor: pointer;
+  text-align: center;
+  height: 200px;
+  line-height: 200px;
+  font-size: 25px;
+  vertical-align: middle;
+  -webkit-transform: perspective(1px) translateZ(0);
+  transform: perspective(1px) translateZ(0);
+  box-shadow: 0 0 1px rgba(0, 0, 0, 0);
+  position: relative;
+  -webkit-transition-property: color, font-size;
+  transition-property: color, font-size;
+  -webkit-transition-duration: 0.5s, 0.3s;
+  transition-duration: 0.5s, 0.3s;
+}
+
+/* Hover.css */
+
+.subject:before {
+  content: "";
+  position: absolute;
+  z-index: -1;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: #000;
+  -webkit-transform: scaleY(0);
+  transform: scaleY(0);
+  -webkit-transform-origin: 50% 100%;
+  transform-origin: 50% 100%;
+  -webkit-transition-property: transform;
+  transition-property: transform;
+  -webkit-transition-duration: 0.5s;
+  transition-duration: 0.5s;
+  -webkit-transition-timing-function: ease-out;
+  transition-timing-function: ease-out;
+}
+.subject:hover, .subject:focus, .subject:active {
+  color: #fff;
+  font-size: 30px;
+  font-weight: bolder;
+}
+.subject:hover:before, .subject:focus:before, .subject:active:before {
+  -webkit-transform: scaleY(1);
+  transform: scaleY(1);
+  -webkit-transition-timing-function: cubic-bezier(0.52, 1.64, 0.37, 0.66);
+  transition-timing-function: cubic-bezier(0.52, 1.64, 0.37, 0.66);
+}
+
+.link-guide:after {
+  content: '클릭하면 이동합니다';
+  font-size: 16px;
+  color: #c2c2c2;
+  position: absolute;
+  bottom: 10px;
+  right: 0;
+  width: 100%;
+  display: block;
+  text-align: center;
+  z-index: 1;
+  line-height: 16px;
+  height: 16px;
+}
+
+@media (max-width: 1000px) {
+  .subject-container {
+    flex-flow: column;
+  }
+  .subject {
+    margin: 10px;
+    box-shadow: 3px 3px 20px rgba(0, 0, 0, 0.459);
+    height: 70px;
+    line-height: 70px;
+  }
+  .link-guide:after {
+    top: 30px;
+    right: 10px;
+    width: 150px;
+  }
+}
+</style>

@@ -1,0 +1,808 @@
+<main class="main landing">
+  <header class="header">
+    <div class="header__container">
+      <h1 class="header__title"><b style="color:#ebebeb">re</b>liablers</h1>
+      <h3 class="header__subtitle">welcome to re</h3>
+      <button class="header__scroll-down-button">Research About Re</button>
+    </div>
+    <div id="particles-js"></div>
+    <div class="scroll-target"></div>
+  </header>
+
+  <section class="section intro">
+    <h2 class="section__title">Reliablers</b></h2>
+    <article class="intro__article intro__article--right">
+      <div class="bg-img" id="bg1"></div>
+      <p class="section__paragraph">
+        Group Re는 현재 대덕SW마이스터고등학교의 전공동아리로 속해있으며, 
+        다양한 분야의 학생들이 각자의 연구와 계발을 위해 만들어진 그룹입니다. 
+        Re의 전체 이름은 Reliablers입니다.
+        약자로 Re를 사용하여 접두사의 뜻을 지닙니다.
+        Re라는 접두사는 다른 단어와 조합해 새로운 단어가 만들어지듯이, 
+        구성원들은 서로 융합하고 협력한다는 뜻을 가지고있습니다.
+      </p>
+    </article>
+    <article class="intro__article intro__article--left">
+      <div class="bg-img" id="bg2"></div>
+      <p class="section__paragraph">
+        단순히 학교 내의 전공동아리 활동에서 성과를 도출하기 위한 그룹이 아니며
+        개인의 발전과 서로 융합하여 발전하는 것이 목적입니다.
+        자신이 배우고자하는 부분을 연구하며 개인프로젝트를 진행하고,
+        융합하고 싶은 멤버끼리 함께 융합프로젝트를 진행합니다.
+      </p>
+    </article>
+  </section>
+
+  <section class="section intro-remembers">
+    <h2 class="section__title">Re<b style="color:#252525;">members</b></h2>
+    <hr class="section__line">
+    <p class="section__content">
+      구성원들은 Re의 멤버, 'Remember'라고 호칭합니다.<br/>
+    </p>>
+    <ul class="remembers">
+      <li class="remember">
+        <div class="remember__profile"><div class="profile__links">
+          <a href=""><img src="images/logo-github.svg" alt="github"></a>
+          <a href=""><img src="images/logo-facebook.svg" alt="facebook"></a>
+        </div></div>
+        <div class="remember__name">김원준</div>
+        <div class="remember__major">Web</div>
+      </li>
+      <li class="remember">
+        <div class="remember__profile"><div class="profile__links">
+          <a href=""><img src="images/logo-github.svg" alt="github"></a>
+          <a href=""><img src="images/logo-facebook.svg" alt="facebook"></a>
+        </div></div>
+        <div class="remember__name">나승채</div>
+        <div class="remember__major">Computer Architecture</div>
+      </li>
+      <li class="remember">
+        <div class="remember__profile"><div class="profile__links">
+          <a href=""><img src="images/logo-github.svg" alt="github"></a>
+          <a href=""><img src="images/logo-facebook.svg" alt="facebook"></a>
+        </div></div>
+        <div class="remember__name">박준현</div>
+        <div class="remember__major">Forensic</div>
+      </li>
+      <li class="remember">
+        <div class="remember__profile"><div class="profile__links">
+          <a href=""><img src="images/logo-github.svg" alt="github"></a>
+          <a href=""><img src="images/logo-facebook.svg" alt="facebook"></a>
+        </div></div>
+        <div class="remember__name">연준모</div>
+        <div class="remember__major">Web</div>
+      </li>
+      <li class="remember">
+        <div class="remember__profile"><div class="profile__links">
+          <a href=""><img src="images/logo-github.svg" alt="github"></a>
+          <a href=""><img src="images/logo-facebook.svg" alt="facebook"></a>
+        </div></div>
+        <div class="remember__name">윤효상</div>
+        <div class="remember__major">Network</div>
+      </li>
+      <li class="remember">
+        <div class="remember__profile"><div class="profile__links">
+          <a href=""><img src="images/logo-github.svg" alt="github"></a>
+          <a href=""><img src="images/logo-facebook.svg" alt="facebook"></a>
+        </div></div>
+        <div class="remember__name">이석진</div>
+        <div class="remember__major">Game Server</div>
+      </li>
+      <li class="remember">
+        <div class="remember__profile"><div class="profile__links">
+          <a href=""><img src="images/logo-github.svg" alt="github"></a>
+          <a href=""><img src="images/logo-facebook.svg" alt="facebook"></a>
+        </div></div>
+        <div class="remember__name">이성현</div>
+        <div class="remember__major">IOT</div>
+      </li>
+      <li class="remember">
+        <div class="remember__profile"><div class="profile__links">
+          <a href=""><img src="images/logo-github.svg" alt="github"></a>
+          <a href=""><img src="images/logo-facebook.svg" alt="facebook"></a>
+        </div></div>
+        <div class="remember__name">정지우</div>
+        <div class="remember__major">Design</div>
+      </li>
+      <li class="remember">
+        <div class="remember__profile"><div class="profile__links">
+          <a href=""><img src="images/logo-github.svg" alt="github"></a>
+          <a href=""><img src="images/logo-facebook.svg" alt="facebook"></a>
+        </div></div>
+        <div class="remember__name">차태민</div>
+        <div class="remember__major">System</div>
+      </li>
+    </ul>
+  </section>
+</main>
+
+<script src="../scripts/particles.min.js"></script>
+<script>
+(() => {
+  // ui
+  const scrollDownIcon = document.querySelector('.header__scroll-down-button');
+  scrollDownIcon.onclick = function scrollDownToScrollTarget() {
+    document.querySelector('.scroll-target').scrollIntoView({behavior: 'smooth'});
+  }
+
+  // animation
+  const intro = document.querySelector('.intro');
+  const header = document.querySelector('.header');
+  const particles = document.querySelector('#particles-js');
+  const CLASS_NAME = 'active-intro';
+  const naviColorAni = function ifScrollYIsBiggerThanIntroChangeColorAndDeleteParticles(e) {
+    if(window.scrollY >= intro.offsetTop - 60) {
+      document.body.classList.add(CLASS_NAME);
+      header.removeChild(particles);
+    } else {
+      document.body.classList.remove(CLASS_NAME);
+      if (!document.querySelector('#particles-js')) header.appendChild(particles);
+    }
+  }
+  const remembersSection = document.querySelector('.intro-remembers');
+  const remembersSlideAni = function ifScrollYisBiggerThanRemembersSectionAddAnimation(e) {
+    if(remembersSection.getBoundingClientRect().top <= 400) {
+      window.removeEventListener(e.type, remembersSlideAni);
+      remembersSection.classList.add('animation--remembers');
+    }
+  }
+  window.addEventListener('scroll', naviColorAni);
+  window.addEventListener('scroll', remembersSlideAni);
+
+  // particles library
+  particlesJS('particles-js',
+    {
+      "particles": {
+        "number": {
+          "value": 80,
+          "density": {
+            "enable": true,
+            "value_area": 800
+          }
+        },
+        "color": {
+          "value": "#ffffff"
+        },
+        "shape": {
+          "type": "circle",
+          "stroke": {
+            "width": 0,
+            "color": "#000000"
+          },
+          "polygon": {
+            "nb_sides": 5
+          },
+          "image": {
+            "src": "img/github.svg",
+            "width": 100,
+            "height": 100
+          }
+        },
+        "opacity": {
+          "value": 0.5,
+          "random": false,
+          "anim": {
+            "enable": false,
+            "speed": 1,
+            "opacity_min": 0.1,
+            "sync": false
+          }
+        },
+        "size": {
+          "value": 5,
+          "random": true,
+          "anim": {
+            "enable": false,
+            "speed": 40,
+            "size_min": 0.1,
+            "sync": false
+          }
+        },
+        "line_linked": {
+          "enable": true,
+          "distance": 150,
+          "color": "#ffffff",
+          "opacity": 0.4,
+          "width": 1
+        },
+        "move": {
+          "enable": true,
+          "speed": 6,
+          "direction": "none",
+          "random": false,
+          "straight": false,
+          "out_mode": "out",
+          "attract": {
+            "enable": false,
+            "rotateX": 600,
+            "rotateY": 1200
+          }
+        }
+      },
+      "interactivity": {
+        "detect_on": "canvas",
+        "events": {
+          "onhover": {
+            "enable": true,
+            "mode": "repulse"
+          },
+          "onclick": {
+            "enable": true,
+            "mode": "push"
+          },
+          "resize": true
+        },
+        "modes": {
+          "grab": {
+            "distance": 400,
+            "line_linked": {
+              "opacity": 1
+            }
+          },
+          "bubble": {
+            "distance": 400,
+            "size": 40,
+            "duration": 2,
+            "opacity": 8,
+            "speed": 3
+          },
+          "repulse": {
+            "distance": 200
+          },
+          "push": {
+            "particles_nb": 4
+          },
+          "remove": {
+            "particles_nb": 2
+          }
+        }
+      },
+      "retina_detect": true,
+      "config_demo": {
+        "hide_card": false,
+        "background_color": "#b61924",
+        "background_image": "",
+        "background_position": "50% 50%",
+        "background_repeat": "no-repeat",
+        "background_size": "cover"
+      }
+    }
+  );
+})();
+</script>
+
+<style>
+@-webkit-keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@-webkit-keyframes fadeInDown {
+  from {
+    opacity: 0;
+    -webkit-transform: translate3d(0, -100%, 0);
+    transform: translate3d(0, -100%, 0);
+  }
+
+  to {
+    opacity: 1;
+    -webkit-transform: translate3d(0, 0, 0);
+    transform: translate3d(0, 0, 0);
+  }
+}
+
+@keyframes fadeInDown {
+  from {
+    opacity: 0;
+    -webkit-transform: translate3d(0, -100%, 0);
+    transform: translate3d(0, -100%, 0);
+  }
+
+  to {
+    opacity: 1;
+    -webkit-transform: translate3d(0, 0, 0);
+    transform: translate3d(0, 0, 0);
+  }
+}
+
+@-webkit-keyframes fadeInLeft {
+  0% {
+    opacity: 0;
+    -webkit-transform: translate3d(-100%, 0, 0);
+    transform: translate3d(-100%, 0, 0);
+  }
+
+  90% {
+    opacity: 0.7;
+    -webkit-transform: translate3d(-70%, 0, 0);
+    transform: translate3d(0, 0, 0);
+  }
+
+  100% {
+    opacity: 1;
+    -webkit-transform: translate3d(0, 0, 0);
+    transform: translate3d(0, 0, 0);
+  }
+}
+
+@keyframes fadeInLeft {
+  0% {
+    opacity: 0;
+    -webkit-transform: translate3d(-100%, 0, 0);
+    transform: translate3d(-100%, 0, 0);
+  }
+
+  90% {
+    opacity: 0.7;
+    -webkit-transform: translate3d(-70%, 0, 0);
+    transform: translate3d(0, 0, 0);
+  }
+
+  100% {
+    opacity: 1;
+    -webkit-transform: translate3d(0, 0, 0);
+    transform: translate3d(0, 0, 0);
+  }
+}
+
+@-webkit-keyframes float {
+  0% {
+    background-position-y: 6vw;
+  }
+  50% {
+    background-position-y: 4vw;
+  }
+}
+
+@keyframes float {
+  0% {
+    background-position-y: 6vw;
+  }
+  50% {
+    background-position-y: 4vw;
+  }
+}
+
+/* landing start -------------------------------------> */
+
+/* header */
+
+.landing .header {
+  background: -webkit-gradient(linear, left top, right top, from(#F4DE77), to(#FE93AF));
+  background: -webkit-linear-gradient(left, #F4DE77, #FE93AF);
+  background: -o-linear-gradient(left, #F4DE77, #FE93AF);
+  background: linear-gradient(to right, #F4DE77, #FE93AF);
+  height: 100vh;
+  width: 100%;
+  position: relative;
+}
+
+.landing #particles-js{
+  width: 100%;
+  height: 100vh;
+  background-color: none;
+  background-image: url('');
+  background-size: cover;
+  background-position: 50% 50%;
+  background-repeat: no-repeat;
+  position: absolute;
+  top: 0;
+  z-index: 65;
+}
+
+.landing .header__container {
+  -webkit-animation: fadeInLeft 2s ease-out;
+          animation: fadeInLeft 2s ease-out;
+}
+
+.landing .header__title {
+  padding-top: calc(50vh - 200px);
+  color: white;
+  font-size: 140px;
+  line-height: 140px;
+  text-align: center;
+  position: relative;
+  font-weight: bolder;
+  z-index: 60;
+  text-transform: uppercase;
+}
+.landing .header__subtitle {
+  letter-spacing: 40px;
+  font-size: 20px;
+  line-height: 20px;
+  color: white;
+  text-align: center;
+  position: relative;
+  z-index: 60;
+  text-transform: uppercase;
+}
+
+.landing .header__scroll-down-button {
+  font-size: 20px;
+  line-height: 20px;
+  width: 300px;
+  padding: 10px;
+  border: 1px solid white;
+  border-radius: 10px;
+  color: white;
+  background-color: rgba(255, 255, 255, 0.178);
+  display: block;
+  opacity: 0;
+  -webkit-animation: fadeInDown 1s 2s forwards;
+          animation: fadeInDown 1s 2s forwards;
+  -webkit-transition: background-color 0.3s;
+  -o-transition: background-color 0.3s;
+  transition: background-color 0.3s;
+  position: absolute;
+  bottom: 100px;
+  left: 50%;
+  margin-left: -150px;
+  z-index: 70;
+}
+
+.landing .header__scroll-down-button:hover {
+  background-color: rgba(255, 255, 255, 0.534);
+}
+
+.landing .scroll-target {
+  position: absolute;
+  top: calc(100vh - 60px);
+  height: 100vh;
+  z-index: -100;
+}
+
+/* main */
+
+/*  section intro */
+
+.active-intro .for-bg-ani {
+  background-color: #000;
+}
+
+.landing .intro {
+  padding: 50px 0 100px;;
+}
+
+.landing .intro__article {
+  width: 100%;
+  height: 300px;
+  display: flex;
+  margin-top: 50px;
+}
+
+.landing .intro__article--left {
+  flex-flow: row-reverse;
+}
+
+.landing .bg-img {
+  width: 50%;
+}
+
+.landing #bg1 {
+  background: url(../images/bg1.jpg) center center;
+  background-size: cover;
+  height: 100%;
+}
+
+.landing #bg2 {
+  background: url(../images/bg2.jpg) center center;
+  background-size: cover;
+  height: 100%;
+}
+
+.landing .section__paragraph {
+  font-size: 20px;
+  line-height: 30px;
+  width: 50%;
+  max-width: 600px;
+  padding: 50px;
+  font-family: 'SNJL';
+  transition: transform 0.3s;
+  -webkit-transition: transform 0.3s;
+  -moz-transition: transform 0.3s;
+  -ms-transition: transform 0.3s;
+  -o-transition: transform 0.3s;
+}
+
+.landing .intro__article:hover .section__paragraph {
+  transform: translateY(-20px);
+  -webkit-transform: translateY(-20px);
+  -moz-transform: translateY(-20px);
+  -ms-transform: translateY(-20px);
+  -o-transform: translateY(-20px);
+}
+
+/* section introduce-remembers */
+
+.landing .section__line {
+  width: 125px;
+  border: 3px solid #000;
+  opacity: 0;
+}
+
+.landing .section__content {
+  font-size: 20px;
+  line-height: 40px;
+  padding-top: 40px;
+  text-align: center;
+  opacity: 0;
+}
+
+.landing .animation--remembers .section__title {-webkit-animation: fadeIn 1s forwards;animation: fadeIn 1s forwards;}
+.animation--remembers .section__line,
+.landing .animation--remembers .section__content {-webkit-animation: fadeInLeft 2s forwards;animation: fadeInLeft 2s forwards;}
+.landing .animation--remembers .remember {-webkit-animation: fadeIn 1s forwards;animation: fadeIn 1s forwards;}
+.landing .animation--remembers .remember:nth-child(1) {-webkit-animation-delay: 1s;animation-delay: 1s;}
+.landing .animation--remembers .remember:nth-child(2) {-webkit-animation-delay: 1.2s;animation-delay: 1.2s;}
+.landing .animation--remembers .remember:nth-child(3) {-webkit-animation-delay: 1.4s;animation-delay: 1.4s;}
+.landing .animation--remembers .remember:nth-child(4) {-webkit-animation-delay: 1.6s;animation-delay: 1.6s;}
+.landing .animation--remembers .remember:nth-child(5) {-webkit-animation-delay: 1.8s;animation-delay: 1.8s;}
+.landing .animation--remembers .remember:nth-child(6) {-webkit-animation-delay: 2.0s;animation-delay: 2.0s;}
+.landing .animation--remembers .remember:nth-child(7) {-webkit-animation-delay: 2.0s;animation-delay: 2.2s;}
+.landing .animation--remembers .remember:nth-child(8) {-webkit-animation-delay: 2.0s;animation-delay: 2.4s;}
+.landing .animation--remembers .remember:nth-child(9) {-webkit-animation-delay: 2.0s;animation-delay: 2.6s;}
+
+.landing .intro-remembers {
+  color: black;
+  padding-top: 50px;
+  font-family: 'SNJL';
+}
+
+.landing .intro-remembers .section__title {
+  opacity: 0;
+}
+
+.landing .remembers {
+  font-size: 0;
+  text-align: center;
+  padding-bottom: 100px;
+  display: flex;
+  width: 1000px;
+  flex-wrap: wrap;
+  justify-content: left;
+  margin: 50px auto;
+}
+
+.landing .remember {
+  opacity: 0;
+  display: inline-block;
+  position: relative;
+  width: 200px;
+}
+
+.landing .remember__profile {
+  background-color: white;
+  background-size: contain;
+  width: 150px;
+  height: 150px;
+  border-radius: 100%;
+  border: 1px solid #DDD;
+  z-index: 5;
+  margin: 0 auto;
+}
+
+.landing .remember:nth-child(1) .remember__profile {
+  background: url("../images/profile1") no-repeat center center;
+  background-size: cover;
+}
+.landing .remember:nth-child(2) .remember__profile {
+  background: url("../images/profile2") no-repeat center center;
+  background-size: cover;
+}
+.landing .remember:nth-child(3) .remember__profile {
+  background: url("../images/profile3") no-repeat center center;
+  background-size: cover;
+}
+.landing .remember:nth-child(4) .remember__profile {
+  background: url("../images/profile4") no-repeat center center;
+  background-size: cover;
+}
+.landing .remember:nth-child(5) .remember__profile {
+  background: url("../images/profile5") no-repeat center center;
+  background-size: cover;
+}
+.landing .remember:nth-child(6) .remember__profile {
+  background: url("../images/profile6") no-repeat center center;
+  background-size: cover;
+}
+.landing .remember:nth-child(7) .remember__profile {
+  background: url("../images/profile7") no-repeat center center;
+  background-size: cover;
+}
+.landing .remember:nth-child(8) .remember__profile {
+  background: url("../images/profile8") no-repeat center center;
+  background-size: cover;
+}
+.landing .remember:nth-child(9) .remember__profile {
+  background: url("../images/profile9") no-repeat center center;
+  background-size: cover;
+}
+
+.landing .profile__links {
+  background-color: rgba(0, 0, 0, 0.301);
+  border-radius: 100%;
+  height: 100%;
+  opacity: 0;
+  -webkit-transition: all 0.5s;
+  -o-transition: all 0.5s;
+  transition: all 0.5s;
+}
+
+.landing .profile__links img {
+  width: 40px;
+  height: 40px;
+  margin: calc(50% - 20px) 5px 0 5px;
+}
+
+.landing .profile__links img:hover {
+  -webkit-filter: opacity(50%);
+          filter: opacity(50%);
+}
+
+.landing .remember__profile:hover .profile__links {
+  opacity: 1;
+}
+
+.landing .remember__name {
+  font-size: 30px;
+  padding-top: 20px;
+  text-align: center;
+}
+
+.landing .remember__major {
+  font-size: 20px;
+  font-weight: bolder;
+  text-align: center;
+  padding: 10px 0 50px;
+}
+
+@media(max-width: 1300px) {
+  .landing .header__title {
+    padding-top: calc(50vh - 150px);
+    font-size: 80px;
+    line-height: 80px;
+  }
+  .landing .header__subtitle {
+    letter-spacing: 20px;
+    font-size: 20px;
+    line-height: 20px;
+  }
+  .landing .intro {
+    padding-bottom: 50px;
+  }
+  .landing .intro__article {
+    flex-flow: column;
+    height: auto;
+    margin-top: 0;
+  }
+  .landing .bg-img {
+    width: 100%;
+    height: 300px !important;
+  }
+
+  .landing .section__paragraph {
+    width: 100%;
+    max-width: 700px;
+    margin: 0 auto;
+  }
+}
+@media (max-width: 1000px) {
+  .landing .subject-container {
+    flex-flow: column;
+  }
+  .landing .subject {
+    margin: 10px;
+    box-shadow: 3px 3px 20px rgba(0, 0, 0, 0.459);
+    height: 70px;
+    line-height: 70px;
+  }
+  .landing .link-guide:after {
+    top: 30px;
+    right: 10px;
+    width: 150px;
+  }
+  .landing .remembers {
+    flex-direction: column;
+    padding: 0 10px;
+    justify-content: center;
+    width: auto;
+  }
+  .landing .remember {
+    width: 100%;
+    max-width: 500px;
+    margin: 0 auto;
+  }
+  .landing .remember__profile {
+    margin: 0;
+    width: 100px;
+    height: 100px;
+    margin-bottom: 10px;
+  }
+  .landing .profile__links {
+    background: none;
+    opacity: 1;
+    height: 30px;
+    position: absolute;
+    top: 30px;
+    right: 0;
+    transition: none  ;
+    -webkit-transition: none  ;
+    -moz-transition: none  ;
+    -ms-transition: none  ;
+    -o-transition: none  ;
+  }
+  .landing .profile__links img {
+    margin: 0;
+    height: 30px;
+  }
+  .landing .remember__name {
+    font-size: 18px;
+    position: absolute;
+    top: 10px;
+    left: 120px;
+  }
+  .landing .remember__major {
+    position: absolute;
+    font-size: 18px;
+    top: 40px;
+    left: 120px;
+  }
+}
+@media (max-width: 800px) { 
+  .landing .header__title {
+    padding-top: calc(50vh - 150px);
+    font-size: 55px;
+    line-height: 55px;
+  }
+  .landing .header__subtitle {
+    letter-spacing: 10px;
+    font-size: 15px;
+    line-height: 15px;
+  }
+  .landing .header__scroll-down-button {
+    font-size: 15px;
+    line-height: 15px;
+    width: 200px;
+    margin-left: -100px;
+  }
+}
+@media (max-width: 700px) {
+  .landing .scroll-target {
+    top: calc(100vh - 45px);
+  }
+  .landing .section__content {
+    font-size: 13px;
+    line-height: 25px;
+    padding-top: 20px;
+    text-align: center;
+    opacity: 0;
+  }
+}
+@media (max-width: 500px) { 
+  .landing .header__title {
+    padding-top: calc(50vh - 100px);
+    font-size: 40px;
+    line-height: 40px;
+  }
+  .landing .header__subtitle {
+    letter-spacing: 10px;
+    font-size: 15px;
+    line-height: 15px;
+  }
+}
+
+/* landing end -------------------------------------> */
+</style>
