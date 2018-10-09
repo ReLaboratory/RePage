@@ -8,7 +8,7 @@ const app = express();
 
 //connect db & set promise
 mongoose.Promise = global.Promise;
-mongoose.connect(require('./config').dbLink || process.env.dbLink, { useNewUrlParser: true });
+mongoose.connect(process.env.dbLink, { useNewUrlParser: true });
 
 // view engine setup
 app.set('views', path.join(__dirname, 'views'));
