@@ -1,5 +1,8 @@
 # Dependency directories
 /node_modules
 
-# sensitive info
+# Sensitive info
 config.js
+
+# Environment file
+.env
