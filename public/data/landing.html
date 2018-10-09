@@ -1,0 +1,268 @@
+<main class="main landing">
+  <header class="header">
+    <div class="header__container">
+      <h1 class="header__title"><b style="color:#ebebeb">re</b>liablers</h1>
+      <h3 class="header__subtitle">welcome to re</h3>
+      <button class="header__scroll-down-button">Research About Re</button>
+    </div>
+    <div id="particles-js"></div>
+    <div class="scroll-target"></div>
+  </header>
+
+  <section class="section intro">
+    <h2 class="section__title">Reliablers</b></h2>
+    <article class="intro__article intro__article--right">
+      <div class="bg-img" id="bg1"></div>
+      <p class="section__paragraph">
+        Group Re는 현재 대덕SW마이스터고등학교의 전공동아리로 속해있으며, 
+        다양한 분야의 학생들이 각자의 연구와 계발을 위해 만들어진 그룹입니다. 
+        Re의 전체 이름은 Reliablers입니다.
+        약자로 Re를 사용하여 접두사의 뜻을 지닙니다.
+        Re라는 접두사는 다른 단어와 조합해 새로운 단어가 만들어지듯이, 
+        구성원들은 서로 융합하고 협력한다는 뜻을 가지고있습니다.
+      </p>
+    </article>
+    <article class="intro__article intro__article--left">
+      <div class="bg-img" id="bg2"></div>
+      <p class="section__paragraph">
+        단순히 학교 내의 전공동아리 활동에서 성과를 도출하기 위한 그룹이 아니며
+        개인의 발전과 서로 융합하여 발전하는 것이 목적입니다.
+        자신이 배우고자하는 부분을 연구하며 개인프로젝트를 진행하고,
+        융합하고 싶은 멤버끼리 함께 융합프로젝트를 진행합니다.
+      </p>
+    </article>
+  </section>
+
+  <section class="section intro-remembers">
+    <h2 class="section__title">Re<b style="color:#252525;">members</b></h2>
+    <hr class="section__line">
+    <p class="section__content">
+      구성원들은 Re의 멤버, 'Remember'라고 호칭합니다.<br/>
+    </p>>
+    <ul class="remembers">
+      <li class="remember">
+        <div class="remember__profile"><div class="profile__links">
+          <a href=""><img src="images/logo-github.svg" alt="github"></a>
+          <a href=""><img src="images/logo-facebook.svg" alt="facebook"></a>
+        </div></div>
+        <div class="remember__name">김원준</div>
+        <div class="remember__major">Web</div>
+      </li>
+      <li class="remember">
+        <div class="remember__profile"><div class="profile__links">
+          <a href=""><img src="images/logo-github.svg" alt="github"></a>
+          <a href=""><img src="images/logo-facebook.svg" alt="facebook"></a>
+        </div></div>
+        <div class="remember__name">나승채</div>
+        <div class="remember__major">Computer Architecture</div>
+      </li>
+      <li class="remember">
+        <div class="remember__profile"><div class="profile__links">
+          <a href=""><img src="images/logo-github.svg" alt="github"></a>
+          <a href=""><img src="images/logo-facebook.svg" alt="facebook"></a>
+        </div></div>
+        <div class="remember__name">박준현</div>
+        <div class="remember__major">Forensic</div>
+      </li>
+      <li class="remember">
+        <div class="remember__profile"><div class="profile__links">
+          <a href=""><img src="images/logo-github.svg" alt="github"></a>
+          <a href=""><img src="images/logo-facebook.svg" alt="facebook"></a>
+        </div></div>
+        <div class="remember__name">연준모</div>
+        <div class="remember__major">Web</div>
+      </li>
+      <li class="remember">
+        <div class="remember__profile"><div class="profile__links">
+          <a href=""><img src="images/logo-github.svg" alt="github"></a>
+          <a href=""><img src="images/logo-facebook.svg" alt="facebook"></a>
+        </div></div>
+        <div class="remember__name">윤효상</div>
+        <div class="remember__major">Network</div>
+      </li>
+      <li class="remember">
+        <div class="remember__profile"><div class="profile__links">
+          <a href=""><img src="images/logo-github.svg" alt="github"></a>
+          <a href=""><img src="images/logo-facebook.svg" alt="facebook"></a>
+        </div></div>
+        <div class="remember__name">이석진</div>
+        <div class="remember__major">Game Server</div>
+      </li>
+      <li class="remember">
+        <div class="remember__profile"><div class="profile__links">
+          <a href=""><img src="images/logo-github.svg" alt="github"></a>
+          <a href=""><img src="images/logo-facebook.svg" alt="facebook"></a>
+        </div></div>
+        <div class="remember__name">이성현</div>
+        <div class="remember__major">IOT</div>
+      </li>
+      <li class="remember">
+        <div class="remember__profile"><div class="profile__links">
+          <a href=""><img src="images/logo-github.svg" alt="github"></a>
+          <a href=""><img src="images/logo-facebook.svg" alt="facebook"></a>
+        </div></div>
+        <div class="remember__name">정지우</div>
+        <div class="remember__major">Design</div>
+      </li>
+      <li class="remember">
+        <div class="remember__profile"><div class="profile__links">
+          <a href=""><img src="images/logo-github.svg" alt="github"></a>
+          <a href=""><img src="images/logo-facebook.svg" alt="facebook"></a>
+        </div></div>
+        <div class="remember__name">차태민</div>
+        <div class="remember__major">System</div>
+      </li>
+    </ul>
+  </section>
+</main>
+
+<script style="display:none">
+(function() {
+  // ui
+  const scrollDownIcon = document.querySelector('.header__scroll-down-button');
+  scrollDownIcon.onclick = function scrollDownToScrollTarget() {
+    document.querySelector('.scroll-target').scrollIntoView({behavior: 'smooth'});
+  }
+
+  // animation
+  const intro = document.querySelector('.intro');
+  const header = document.querySelector('.header');
+  const CLASS_NAME = 'active-header';
+  const naviColorAni = (e) => {
+    const method = (window.scrollY >= intro.offsetTop - 60) ? 'remove' : 'add';
+    document.body.classList[method](CLASS_NAME);
+  }
+  const remembersSection = document.querySelector('.intro-remembers');
+  const remembersSlideAni = (e) => {
+    if(remembersSection.getBoundingClientRect().top <= 400) {
+      window.removeEventListener(e.type, remembersSlideAni);
+      remembersSection.classList.add('animation--remembers');
+    }
+  }
+  window.addEventListener('scroll', naviColorAni);
+  window.addEventListener('scroll', remembersSlideAni);
+
+  // first loaded
+  naviColorAni();
+
+  // particles library
+  particlesJS('particles-js',
+    {
+      "particles": {
+        "number": {
+          "value": 80,
+          "density": {
+            "enable": true,
+            "value_area": 800
+          }
+        },
+        "color": {
+          "value": "#ffffff"
+        },
+        "shape": {
+          "type": "circle",
+          "stroke": {
+            "width": 0,
+            "color": "#000000"
+          },
+          "polygon": {
+            "nb_sides": 5
+          },
+          "image": {
+            "src": "img/github.svg",
+            "width": 100,
+            "height": 100
+          }
+        },
+        "opacity": {
+          "value": 0.5,
+          "random": false,
+          "anim": {
+            "enable": false,
+            "speed": 1,
+            "opacity_min": 0.1,
+            "sync": false
+          }
+        },
+        "size": {
+          "value": 5,
+          "random": true,
+          "anim": {
+            "enable": false,
+            "speed": 40,
+            "size_min": 0.1,
+            "sync": false
+          }
+        },
+        "line_linked": {
+          "enable": true,
+          "distance": 150,
+          "color": "#ffffff",
+          "opacity": 0.4,
+          "width": 1
+        },
+        "move": {
+          "enable": true,
+          "speed": 6,
+          "direction": "none",
+          "random": false,
+          "straight": false,
+          "out_mode": "out",
+          "attract": {
+            "enable": false,
+            "rotateX": 600,
+            "rotateY": 1200
+          }
+        }
+      },
+      "interactivity": {
+        "detect_on": "canvas",
+        "events": {
+          "onhover": {
+            "enable": true,
+            "mode": "repulse"
+          },
+          "onclick": {
+            "enable": true,
+            "mode": "push"
+          },
+          "resize": true
+        },
+        "modes": {
+          "grab": {
+            "distance": 400,
+            "line_linked": {
+              "opacity": 1
+            }
+          },
+          "bubble": {
+            "distance": 400,
+            "size": 40,
+            "duration": 2,
+            "opacity": 8,
+            "speed": 3
+          },
+          "repulse": {
+            "distance": 200
+          },
+          "push": {
+            "particles_nb": 4
+          },
+          "remove": {
+            "particles_nb": 2
+          }
+        }
+      },
+      "retina_detect": true,
+      "config_demo": {
+        "hide_card": false,
+        "background_color": "#b61924",
+        "background_image": "",
+        "background_position": "50% 50%",
+        "background_repeat": "no-repeat",
+        "background_size": "cover"
+      }
+    }
+  );
+})();
+</script>
