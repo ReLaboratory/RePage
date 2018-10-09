@@ -29,7 +29,7 @@
     'select'() {
       get('/data/select.html').then(render);
     },
-    'lecture'() {
+    'edu'() {
       get('/data/lecture.html').then(render);
     },
     otherwise(hash) {
@@ -38,7 +38,7 @@
   };
 
   function router() {
-    const hash = location.hash.substr(1);
+    const hash = location.hash.substr(1).split('?')[0];
     (routes[hash] || routes.otherwise)(hash);
   }
 
