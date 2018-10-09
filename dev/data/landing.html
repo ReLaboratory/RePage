@@ -127,19 +127,13 @@
   // animation
   const intro = document.querySelector('.intro');
   const header = document.querySelector('.header');
-  const particles = document.querySelector('#particles-js');
   const CLASS_NAME = 'active-intro';
-  const naviColorAni = function ifScrollYIsBiggerThanIntroChangeColorAndDeleteParticles(e) {
-    if(window.scrollY >= intro.offsetTop - 60) {
-      document.body.classList.add(CLASS_NAME);
-      header.removeChild(particles);
-    } else {
-      document.body.classList.remove(CLASS_NAME);
-      if (!document.querySelector('#particles-js')) header.appendChild(particles);
-    }
+  const naviColorAni = (e) => {
+    const method = (window.scrollY >= intro.offsetTop - 60) ? 'add' : 'remove';
+    document.body.classList[method](CLASS_NAME);
   }
   const remembersSection = document.querySelector('.intro-remembers');
-  const remembersSlideAni = function ifScrollYisBiggerThanRemembersSectionAddAnimation(e) {
+  const remembersSlideAni = (e) => {
     if(remembersSection.getBoundingClientRect().top <= 400) {
       window.removeEventListener(e.type, remembersSlideAni);
       remembersSection.classList.add('animation--remembers');
