@@ -904,7 +904,6 @@ body {
   position: relative;
   width: 100%;
   padding-bottom: 56.25%;
-  border-radius: 20px;
   -webkit-box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.5);
           box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.5);
 }
