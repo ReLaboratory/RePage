@@ -9,7 +9,8 @@
   <!-- end -->
 
   <aside class="aside">
-    <h4 class="aside__title">index
+    <h4 class="aside__title">
+      index
       <button class="close-aside-button">
         <div></div>
         <div></div>
@@ -44,7 +45,7 @@
 <script>
 (function() {
   // ui
-  const mainElement = document.querySelector('.main');
+  const mainElement = document.querySelector('.lecture');
   document.querySelector('.show-aside-button').onclick = () => mainElement.classList.add('main--active-show-aside');
   document.querySelector('.close-aside-button').onclick = () => mainElement.classList.remove('main--active-show-aside');
   document.querySelector('.shadow-opacity').onclick = () => mainElement.classList.remove('main--active-show-aside');

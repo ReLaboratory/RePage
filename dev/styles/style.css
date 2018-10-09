@@ -1,20 +1,3 @@
-@media (max-width: 700px) {
-  .for-bg-ani {
-    font-size: 15px;
-    line-height: 15px;
-    padding: 5px 10px;
-    height: 45px;
-  }
-  .top-nav__logo img {
-    height: 25px;
-  }
-  .top-nav__link {
-    margin: 0 5px;
-  }
-  .top-nav__link a {
-    padding: 10px 10px;
-  }
-}
 @-webkit-keyframes fadeIn {
   from {
     opacity: 0;
@@ -219,6 +202,24 @@ body {
 
 .top-nav__link:hover a {
   background-color: rgba(255, 255, 255, 0.4);
+}
+
+@media (max-width: 700px) {
+  .for-bg-ani {
+    font-size: 15px;
+    line-height: 15px;
+    padding: 5px 10px;
+    height: 45px;
+  }
+  .top-nav__logo img {
+    height: 25px;
+  }
+  .top-nav__link {
+    margin: 0 5px;
+  }
+  .top-nav__link a {
+    padding: 10px 10px;
+  }
 }
 
 /* footer */
@@ -783,7 +784,7 @@ body {
   }
 }
 
-/* lecter start -------------------------------------> */
+/* lecture start -------------------------------------> */
 
 .lecture.main {
   background-color: #fafafa;
@@ -846,7 +847,7 @@ body {
 }
 .lecture .close-aside-button>div:nth-child(1) {-webkit-transform: rotateZ(45deg);-ms-transform: rotate(45deg);transform: rotateZ(45deg);}
 .lecture .close-aside-button>div:nth-child(2) {-webkit-transform: rotateZ(135deg);-ms-transform: rotate(135deg);transform: rotateZ(135deg);}
-.lecture .main--active-show-aside .aside {
+.lecture.main--active-show-aside .aside {
   left: 0;
 }
 .lecture .main--active-show-aside .shadow-opacity {
@@ -923,7 +924,7 @@ body {
     width: 100%;
     padding-top: 50px;
   }
-  .show-aside-button,
+  .lecture .show-aside-button,
   .lecture .close-aside-button {
     display: block;
   }
@@ -941,6 +942,7 @@ body {
     overflow-y: scroll;
     height: calc(100vh - 60px);
   }
+  .lecture
   .lecture .aside__title {
     font-size: 20px;
     line-height: 20px;
