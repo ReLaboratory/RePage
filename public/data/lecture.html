@@ -75,13 +75,13 @@
   })
 
   const requestUrl = `/edu/${paramObject.lec}/${paramObject.page}`;
-  get(requestUrl).then(({ data }) => {
+  get(requestUrl).then((res) => {
     const {
       index,
       titles,
       content,
       src,
-    } = data;
+    } = JSON.parse(res);
     
     const lectureElement = document.querySelector('.lecture-list-item')
     const copyable = lectureElement.querySelector('.lecture-link');
