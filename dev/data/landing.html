@@ -127,9 +127,9 @@
   // animation
   const intro = document.querySelector('.intro');
   const header = document.querySelector('.header');
-  const CLASS_NAME = 'active-intro';
+  const CLASS_NAME = 'active-header';
   const naviColorAni = (e) => {
-    const method = (window.scrollY >= intro.offsetTop - 60) ? 'add' : 'remove';
+    const method = (window.scrollY >= intro.offsetTop - 60) ? 'remove' : 'add';
     document.body.classList[method](CLASS_NAME);
   }
   const remembersSection = document.querySelector('.intro-remembers');
@@ -141,6 +141,9 @@
   }
   window.addEventListener('scroll', naviColorAni);
   window.addEventListener('scroll', remembersSlideAni);
+
+  // first loaded
+  naviColorAni();
 
   // particles library
   particlesJS('particles-js',

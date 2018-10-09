@@ -2,8 +2,13 @@
   const app = document.querySelector('#app');
   const navigation = document.querySelector('.top-nav');
 
-  const render = html => {
+  function rendered() {
+    document.body.className = '';
+  }
+
+  const render = (html) => {
     app.innerHTML = html;
+    rendered();
     eval(document.querySelector('script').innerText);
   };
 
