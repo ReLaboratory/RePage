@@ -12,10 +12,10 @@ router.get('/:subject/:no', async (req, res) => {
     return res.status(404).end();
     
     res.status(200).json({
-      index: no - 1,
+      index: no,
       titles: subjectObj.lectures.map(e => e.title),
-      content: subjectObj.lectures[no - 1].content,
-      src: subjectObj.lectures[no - 1].src
+      content: subjectObj.lectures[no].content,
+      src: subjectObj.lectures[no].src
     });
   } catch (err) {
     console.log(err);
