@@ -479,39 +479,39 @@ body {
 }
 
 .landing .remember:nth-child(1) .remember__profile {
-  background: url("../images/profile1") no-repeat center center;
+  background: url("../images/profile1.png") no-repeat center center;
   background-size: cover;
 }
 .landing .remember:nth-child(2) .remember__profile {
-  background: url("../images/profile2") no-repeat center center;
+  background: url("../images/profile2.png") no-repeat center center;
   background-size: cover;
 }
 .landing .remember:nth-child(3) .remember__profile {
-  background: url("../images/profile3") no-repeat center center;
+  background: url("../images/profile3.png") no-repeat center center;
   background-size: cover;
 }
 .landing .remember:nth-child(4) .remember__profile {
-  background: url("../images/profile4") no-repeat center center;
+  background: url("../images/profile4.png") no-repeat center center;
   background-size: cover;
 }
 .landing .remember:nth-child(5) .remember__profile {
-  background: url("../images/profile5") no-repeat center center;
+  background: url("../images/profile5.png") no-repeat center center;
   background-size: cover;
 }
 .landing .remember:nth-child(6) .remember__profile {
-  background: url("../images/profile6") no-repeat center center;
+  background: url("../images/profile6.png") no-repeat center center;
   background-size: cover;
 }
 .landing .remember:nth-child(7) .remember__profile {
-  background: url("../images/profile7") no-repeat center center;
+  background: url("../images/profile7.png") no-repeat center center;
   background-size: cover;
 }
 .landing .remember:nth-child(8) .remember__profile {
-  background: url("../images/profile8") no-repeat center center;
+  background: url("../images/profile8.png") no-repeat center center;
   background-size: cover;
 }
 .landing .remember:nth-child(9) .remember__profile {
-  background: url("../images/profile9") no-repeat center center;
+  background: url("../images/profile9.png") no-repeat center center;
   background-size: cover;
 }
 
