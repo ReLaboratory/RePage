@@ -6,36 +6,23 @@
     document.body.className = '';
   }
 
-  const render = (html) => {
+  const renderHtml = (html) => {
     app.innerHTML = html;
     rendered();
-    eval(document.querySelector('script').innerText);
   };
-
-  function get(url) {
-    return new Promise((resolve, reject) => {
-      const req = new XMLHttpRequest();
-      req.open('GET', url);
-      req.send();
-
-      req.onreadystatechange = function () {
-        if (req.readyState === XMLHttpRequest.DONE) {
-          if (req.status === 200) resolve(req.response);
-          else reject(req.statusText);
-        }
-      };
-    });
-  }
 
   const routes = {
     ''() {
-      get('/data/landing.html').then(render);
+      get('/data/landing.html').then(renderHtml);
+      loadScript('/scripts/landing.js');
     },
     'select'() {
-      get('/data/select.html').then(render);
+      get('/data/select.html').then(renderHtml);
+      loadScript('/scripts/select.js');
     },
     'edu'() {
-      get('/data/lecture.html').then(render);
+      get('/data/lecture.html').then(renderHtml);
+      loadScript('/scripts/lecture.js');
     },
     otherwise(hash) {
       app.innerHTML = `${hash} Not Found`;
