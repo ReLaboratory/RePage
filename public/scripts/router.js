@@ -13,15 +13,15 @@
 
   const routes = {
     ''() {
-      get('/data/landing.html').then(renderHtml);
+      get('/view/landing.html').then(renderHtml);
       loadScript('/scripts/landing.js');
     },
     'select'() {
-      get('/data/select.html').then(renderHtml);
+      get('/view/select.html').then(renderHtml);
       loadScript('/scripts/select.js');
     },
     'edu'() {
-      get('/data/lecture.html').then(renderHtml);
+      get('/view/lecture.html').then(renderHtml);
       loadScript('/scripts/lecture.js');
     },
     otherwise(hash) {
