@@ -34,114 +34,89 @@
     <h2 class="section__title">Re<b style="color:#252525;">members</b></h2>
     <hr class="section__line">
     <p class="section__content">
-      구성원들은 Re의 멤버, 'Remember'라고 호칭합니다. <br />
-      우리는 연령대, 출신, 성별 등의 요소들을 고려하지 않습니다.
+      구성원들은 Re의 멤버, 'Remember'라고 호칭합니다.<br/>
+      우리는 연령대, 출신, 성별 등의 요소들을 고려하지 않습니다.<br>
       그저 자신이 특정 분야에 관심이 있고, 그 관심 분야를 공부할 때 즐거움을 느끼기만 한다면 누구나 Remember가 될 수 있습니다.
     </p>
     <ul class="remembers">
       <li class="remember">
         <div class="remember__profile">
           <div class="profile__links">
-            <a target="blank" href="https://github.com/KimWonJun"><img src="images/logo-github.svg" alt="github"></a>
-            <a target="blank" href="https://www.facebook.com/kim1jun"><img src="images/logo-facebook.svg" alt="facebook"></a>
+            <a target="blank" data-github><img src="images/logo-github.svg" alt="github"></a>
+            <a target="blank" data-facebook><img src="images/logo-facebook.svg" alt="facebook"></a>
           </div>
         </div>
-        <div class="remember__name">김원준</div>
-        <div class="remember__major">Web</div>
+        <div class="remember__name" data-name></div>
+        <div class="remember__major" data-major></div>
       </li>
-      <li class="remember">
-        <div class="remember__profile">
-          <div class="profile__links">
-            <a target="blank" href="https://github.com/TikaWorld"><img src="images/logo-github.svg" alt="github"></a>
-            <a target="blank" href="https://www.facebook.com/profile.php?id=100015172599499"><img src="images/logo-facebook.svg"
-                alt="facebook"></a>
-          </div>
-        </div>
-        <div class="remember__name">나승채</div>
-        <div class="remember__major">Computer Architecture</div>
-      </li>
-      <li class="remember">
-        <div class="remember__profile">
-          <div class="profile__links">
-            <a target="blank" href="https://github.com/JunHyunJunHyun"><img src="images/logo-github.svg" alt="github"></a>
-            <a target="blank" href="https://www.facebook.com/m1o2l3e"><img src="images/logo-facebook.svg" alt="facebook"></a>
-          </div>
-        </div>
-        <div class="remember__name">박준현</div>
-        <div class="remember__major">Forensic</div>
-      </li>
-      <li class="remember">
-        <div class="remember__profile">
-          <div class="profile__links">
-            <a target="blank" href="https://github.com/Yeondooo"><img src="images/logo-github.svg" alt="github"></a>
-            <a target="blank" href="https://www.facebook.com/profile.php?id=100009246228971"><img src="images/logo-facebook.svg"
-                alt="facebook"></a>
-          </div>
-        </div>
-        <div class="remember__name">연준모</div>
-        <div class="remember__major">Web</div>
-      </li>
-      <li class="remember">
-        <div class="remember__profile">
-          <div class="profile__links">
-            <a target="blank" href="https://github.com/yhs7496"><img src="images/logo-github.svg" alt="github"></a>
-            <a target="blank" href="https://www.facebook.com/profile.php?id=100006513853017"><img src="images/logo-facebook.svg"
-                alt="facebook"></a>
-          </div>
-        </div>
-        <div class="remember__name">윤효상</div>
-        <div class="remember__major">Network</div>
-      </li>
-      <li class="remember">
-        <div class="remember__profile">
-          <div class="profile__links">
-            <a target="blank" href="http://github.com/Othereum"><img src="images/logo-github.svg" alt="github"></a>
-            <a target="blank" href="https://www.facebook.com/profile.php?id=100011656855934"><img src="images/logo-facebook.svg"
-                alt="facebook"></a>
-          </div>
-        </div>
-        <div class="remember__name">이석진</div>
-        <div class="remember__major">Game Server</div>
-      </li>
-      <li class="remember">
-        <div class="remember__profile">
-          <div class="profile__links">
-            <a target="blank" href="https://github.com/joooosan"><img src="images/logo-github.svg" alt="github"></a>
-            <a target="blank" href="https://www.facebook.com/profile.php?id=100012909600203"><img src="images/logo-facebook.svg"
-                alt="facebook"></a>
-          </div>
-        </div>
-        <div class="remember__name">이성현</div>
-        <div class="remember__major">IOT</div>
-      </li>
-      <li class="remember">
-        <div class="remember__profile">
-          <div class="profile__links">
-            <a target="blank" href="https://github.com/KingSpongebob"><img src="images/logo-github.svg" alt="github"></a>
-            <a target="blank" href="https://www.facebook.com/profile.php?id=100014038693137"><img src="images/logo-facebook.svg"
-                alt="facebook"></a>
-          </div>
-        </div>
-        <div class="remember__name">정지우</div>
-        <div class="remember__major">Design</div>
-      </li>
-      <li class="remember">
-        <div class="remember__profile">
-          <div class="profile__links">
-            <a target="blank" href="https://github.com/HubCodes"><img src="images/logo-github.svg" alt="github"></a>
-            <a target="blank" href="https://www.facebook.com/profile.php?id=100015559397224"><img src="images/logo-facebook.svg"
-                alt="facebook"></a>
-          </div>
-        </div>
-        <div class="remember__name">차태민</div>
-        <div class="remember__major">System</div>
-      </li>
+
+        
     </ul>
   </section>
 </main>
 
-<script style="display:none">
+<script>
   (function () {
+    // data rendering
+    const remembers = [{
+      name: '김원준',
+      major: 'Web',
+      githubLink: 'https://github.com/KimWonJun',
+      facebookLink: 'https://www.facebook.com/kim1jun',
+    },{
+      name: '나승채',
+      major: 'Computer Architecture',
+      githubLink: 'https://github.com/TikaWorld',
+      facebookLink: 'https://www.facebook.com/profile.php?id=100015172599499',
+    }, {
+      name: '박준현',
+      major: 'Forensic',
+      githubLink: 'https://github.com/JunHyunJunHyun',
+      facebookLink: 'https://www.facebook.com/m1o2l3e',
+    }, {
+      name: '연준모',
+      major: 'Web',
+      githubLink: 'https://github.com/Yeondooo',
+      facebookLink: 'https://www.facebook.com/profile.php?id=100009246228971',
+    }, {
+      name: '윤효상',
+      major: 'Network',
+      githubLink: 'https://github.com/yhs7496',
+      facebookLink: 'https://www.facebook.com/profile.php?id=100006513853017',
+    }, {
+      name: '이석진',
+      major: 'Game Server',
+      githubLink: 'http://github.com/Othereum',
+      facebookLink: 'https://www.facebook.com/profile.php?id=100011656855934',
+    }, {
+      name: '이성현',
+      major: 'IOT',
+      githubLink: 'https://github.com/joooosan',
+      facebookLink: 'https://www.facebook.com/profile.php?id=100012909600203',
+    }, {
+      name: '정지우',
+      major: 'Design',
+      githubLink: 'https://github.com/KingSpongebob',
+      facebookLink: 'https://www.facebook.com/profile.php?id=100014038693137',
+    }, {
+      name: '차태민',
+      major: 'System',
+      githubLink: 'https://github.com/HubCodes',
+      facebookLink: 'https://www.facebook.com/profile.php?id=100015559397224',
+    }];
+    const remembersEl = document.querySelector('.remembers');
+    const rememberEl = document.querySelector('.remember');
+    rememberEl.remove();
+
+    remembers.forEach(({ name, major, githubLink, facebookLink }, i) => {
+      const targetEl = rememberEl.cloneNode(true);
+      targetEl.querySelector('[data-name]').innerText = name;
+      targetEl.querySelector('[data-major]').innerText = major;
+      targetEl.querySelector('[data-github]').href = githubLink;
+      targetEl.querySelector('[data-facebook]').href = facebookLink;
+      remembersEl.appendChild(targetEl);
+    })
+
     // ui
     const scrollDownIcon = document.querySelector('.header__scroll-down-button');
     scrollDownIcon.onclick = function scrollDownToScrollTarget() {
