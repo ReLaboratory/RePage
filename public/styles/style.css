@@ -427,17 +427,8 @@ body {
 
 .landing .animation--remembers .section__title {-webkit-animation: fadeIn 1s forwards;animation: fadeIn 1s forwards;}
 .animation--remembers .section__line,
-.landing .animation--remembers .section__content {-webkit-animation: fadeInLeft 2s forwards;animation: fadeInLeft 2s forwards;}
+.landing .animation--remembers .section__content {-webkit-animation: fadeIn 1s forwards 0.2s;animation: fadeIn 1s forwards 0.2s;}
 .landing .animation--remembers .remember {-webkit-animation: fadeIn 1s forwards;animation: fadeIn 1s forwards;}
-.landing .animation--remembers .remember:nth-child(1) {-webkit-animation-delay: 1s;animation-delay: 1s;}
-.landing .animation--remembers .remember:nth-child(2) {-webkit-animation-delay: 1.2s;animation-delay: 1.2s;}
-.landing .animation--remembers .remember:nth-child(3) {-webkit-animation-delay: 1.4s;animation-delay: 1.4s;}
-.landing .animation--remembers .remember:nth-child(4) {-webkit-animation-delay: 1.6s;animation-delay: 1.6s;}
-.landing .animation--remembers .remember:nth-child(5) {-webkit-animation-delay: 1.8s;animation-delay: 1.8s;}
-.landing .animation--remembers .remember:nth-child(6) {-webkit-animation-delay: 2.0s;animation-delay: 2.0s;}
-.landing .animation--remembers .remember:nth-child(7) {-webkit-animation-delay: 2.0s;animation-delay: 2.2s;}
-.landing .animation--remembers .remember:nth-child(8) {-webkit-animation-delay: 2.0s;animation-delay: 2.4s;}
-.landing .animation--remembers .remember:nth-child(9) {-webkit-animation-delay: 2.0s;animation-delay: 2.6s;}
 
 .landing .intro-remembers {
   color: black;
@@ -476,42 +467,6 @@ body {
   border: 1px solid #DDD;
   z-index: 5;
   margin: 0 auto;
-}
-
-.landing .remember:nth-child(1) .remember__profile {
-  background: url("../images/profile1.png") no-repeat center center;
-  background-size: 70px;
-}
-.landing .remember:nth-child(2) .remember__profile {
-  background: url("../images/profile2.png") no-repeat center center;
-  background-size: 70px;
-}
-.landing .remember:nth-child(3) .remember__profile {
-  background: url("../images/profile3.png") no-repeat center center;
-  background-size: 70px;
-}
-.landing .remember:nth-child(4) .remember__profile {
-  background: url("../images/profile4.png") no-repeat center center;
-  background-size: 70px;
-}
-.landing .remember:nth-child(5) .remember__profile {
-  background: url("../images/profile5.png") no-repeat center center;
-  background-size: 70px;
-}
-.landing .remember:nth-child(6) .remember__profile {
-  background: url("../images/profile6.png") no-repeat center center;
-  background-size: 70px;
-}
-.landing .remember:nth-child(7) .remember__profile {
-  background: url("../images/profile7.png") no-repeat center center;
-  background-size: 70px;
-}
-.landing .remember:nth-child(8) .remember__profile {
-  background: url("../images/profile8.png") no-repeat center center;
-  background-size: 70px;
-}
-.landing .remember:nth-child(9) .remember__profile {
-  background: url("../images/profile9.png") no-repeat center center;
   background-size: 70px;
 }
 

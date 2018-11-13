@@ -9,46 +9,55 @@
       major: 'Web',
       githubLink: 'https://github.com/KimWonJun',
       facebookLink: 'https://www.facebook.com/kim1jun',
+      profileImgPath: '/images/profile1.png',
     },{
       name: '나승채',
       major: 'Computer Architecture',
       githubLink: 'https://github.com/TikaWorld',
       facebookLink: 'https://www.facebook.com/profile.php?id=100015172599499',
+      profileImgPath: '/images/profile2.png',
     }, {
       name: '박준현',
       major: 'Forensic',
       githubLink: 'https://github.com/JunHyunJunHyun',
       facebookLink: 'https://www.facebook.com/m1o2l3e',
+      profileImgPath: '/images/profile3.png',
     }, {
       name: '연준모',
       major: 'Web',
       githubLink: 'https://github.com/Yeondooo',
       facebookLink: 'https://www.facebook.com/profile.php?id=100009246228971',
+      profileImgPath: '/images/profile4.png',
     }, {
       name: '윤효상',
       major: 'Network',
       githubLink: 'https://github.com/yhs7496',
       facebookLink: 'https://www.facebook.com/profile.php?id=100006513853017',
+      profileImgPath: '/images/profile5.png',
     }, {
       name: '이석진',
       major: 'Game Server',
       githubLink: 'http://github.com/Othereum',
       facebookLink: 'https://www.facebook.com/profile.php?id=100011656855934',
+      profileImgPath: '/images/profile6.png',
     }, {
       name: '이성현',
       major: 'IOT',
       githubLink: 'https://github.com/joooosan',
       facebookLink: 'https://www.facebook.com/profile.php?id=100012909600203',
+      profileImgPath: '/images/profile7.png',
     }, {
       name: '정지우',
       major: 'Design',
       githubLink: 'https://github.com/KingSpongebob',
       facebookLink: 'https://www.facebook.com/profile.php?id=100014038693137',
+      profileImgPath: '../images/profile8.png',
     }, {
       name: '차태민',
       major: 'System',
       githubLink: 'https://github.com/HubCodes',
       facebookLink: 'https://www.facebook.com/profile.php?id=100015559397224',
+      profileImgPath: '../images/profile9.png',
     }],
   };
 
@@ -64,12 +73,17 @@
     const rememberEl = remembersEl.querySelector('.remember');
     rememberEl.remove();
 
-    data.remembers.forEach(({ name, major, githubLink, facebookLink }, i) => {
+    data.remembers.forEach(({ name, major, githubLink, facebookLink, profileImgPath }, i) => {
       const targetEl = rememberEl.cloneNode(true);
+      targetEl.style.animationDelay = `${0.5 + (i * 0.2)}s`;
       targetEl.querySelector('[data-name]').innerText = name;
       targetEl.querySelector('[data-major]').innerText = major;
       targetEl.querySelector('[data-github]').href = githubLink;
       targetEl.querySelector('[data-facebook]').href = facebookLink;
+      targetEl.querySelector('[data-profile]').style.backgroundImage = `url('${profileImgPath}')`;
+      targetEl.querySelector('[data-profile]').style.backgroundRepeat = 'no-repeat';
+      targetEl.querySelector('[data-profile]').style.backgroundPosition = 'center center';
+      targetEl.querySelector('[data-profile]').style.backgroundSize = '70px';
       remembersEl.appendChild(targetEl);
     })
   }
