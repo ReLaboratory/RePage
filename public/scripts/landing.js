@@ -83,7 +83,7 @@
       targetEl.querySelector('[data-profile]').style.backgroundImage = `url('${profileImgPath}')`;
       targetEl.querySelector('[data-profile]').style.backgroundRepeat = 'no-repeat';
       targetEl.querySelector('[data-profile]').style.backgroundPosition = 'center center';
-      targetEl.querySelector('[data-profile]').style.backgroundSize = '70px';
+      targetEl.querySelector('[data-profile]').style.backgroundSize = '50%';
       remembersEl.appendChild(targetEl);
     })
   }
@@ -96,29 +96,6 @@
   scrollDownIcon.onclick = function scrollDownToScrollTarget() {
     document.querySelector('.scroll-target').scrollIntoView({ behavior: 'smooth' });
   }
-
-  // animation
-  const intro = document.querySelector('.intro');
-  const header = document.querySelector('.header');
-  const CLASS_NAME = 'active-header';
-  const naviColorAni = (e) => {
-    const method = (window.scrollY >= intro.offsetTop - 60) ? 'remove' : 'add';
-    document.body.classList[method](CLASS_NAME);
-  }
-  const remembersSection = document.querySelector('.intro-remembers');
-  const remembersSlideAni = (e) => {
-    if (remembersSection.getBoundingClientRect().top <= 400) {
-      window.removeEventListener(e.type, remembersSlideAni);
-      remembersSection.classList.add('animation--remembers');
-    }
-  }
-
-  // add event listener
-  window.addEventListener('scroll', naviColorAni);
-  window.addEventListener('scroll', remembersSlideAni);
-
-  // first loaded
-  naviColorAni();
 
   // particles library
   loadScript('/scripts/particles.min.js', () => {
@@ -240,5 +217,12 @@
         }
       }
     );
+  })
+
+  loadScript('/scripts/scrollreveal.min.js', () => {
+    ScrollReveal().reveal('[data-scroll-reveal]', {
+      reset: true,
+      duration: 1200,
+    });
   })
 })();
