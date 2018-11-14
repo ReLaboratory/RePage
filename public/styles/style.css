@@ -51,10 +51,10 @@ body {
   font-size: 17px;
   line-height: 20px;
   width: 100%;
-  background: -webkit-gradient(linear, left top, right top, from(#F4DE77), to(#FE93AF));
-  background: -webkit-linear-gradient(left, #F4DE77, #FE93AF);
-  background: -o-linear-gradient(left, #F4DE77, #FE93AF);
-  background: linear-gradient(to right, #F4DE77, #FE93AF);
+  background: -webkit-gradient(linear, left top, right top, from(#aeb2f6),#e9a9d2(#FE93AF));
+  background: -webkit-linear-gradient(left, #aeb2f6, #e9a9d2);
+  background: -o-linear-gradient(left, #aeb2f6, #e9a9d2);
+  background: linear-gradient(to right, #aeb2f6, #e9a9d2);
   height: 50px;
 }
 
@@ -110,10 +110,10 @@ body {
 /* header */
 
 .landing .header {
-  background: -webkit-gradient(linear, left top, right top, from(#F4DE77), to(#FE93AF));
-  background: -webkit-linear-gradient(left, #F4DE77, #FE93AF);
-  background: -o-linear-gradient(left, #F4DE77, #FE93AF);
-  background: linear-gradient(to right, #F4DE77, #FE93AF);
+  background: -webkit-gradient(linear, left top, right top, from(#aeb2f6),#e9a9d2(#FE93AF));
+  background: -webkit-linear-gradient(left, #aeb2f6, #e9a9d2);
+  background: -o-linear-gradient(left, #aeb2f6, #e9a9d2);
+  background: linear-gradient(to right, #aeb2f6, #e9a9d2);
   height: calc(100vh - 50px);
   width: 100%;
   position: relative;
@@ -179,7 +179,7 @@ body {
 
 .landing .scroll-target {
   position: absolute;
-  top: calc(100vh - 60px);
+  top: 100vh;
   height: 100vh;
   z-index: -100;
 }
