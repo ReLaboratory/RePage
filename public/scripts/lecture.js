@@ -38,14 +38,15 @@
       src,
     } = JSON.parse(res);
     
-    const lectureElement = document.querySelector('.lecture-list-item')
-    const copyable = lectureElement.querySelector('.lecture-link');
-    lectureElement.innerHTML = '';
+    const lectureElement = document.querySelector('.lecture-list');
+    const copyable = lectureElement.querySelector('.lecture-list-item');
+    copyable.remove();
     titles.forEach((title, index) => {
-      const el = copyable.cloneNode();
-      el.innerHTML = title;
-      el.href = `#edu?lec=${paramObject.lec}&page=${index}`;
-      lectureElement.appendChild(el);
+      const listEl = copyable.cloneNode();
+      const linkEl = listEl.querySelector('.lecture-link');
+      listEl.innerHTML = title;
+      listEl.href = `#edu?lec=${paramObject.lec}&page=${index}`;
+      lectureElement.appendChild(listEl);
     })
 
     console.log(document.querySelector('.youtube-iframe').src);
