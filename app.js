@@ -10,11 +10,7 @@ const app = express();
 mongoose.Promise = global.Promise;
 mongoose.connect(process.env.dbLink, { useNewUrlParser: true });
 
-// view engine setup
-app.set('views', path.join(__dirname, 'views'));
-app.set('view engine', 'ejs');
-
-app.use(logger('dev'));
+app.use(logger('common', { stream: fs.createWriteStream('re-page.log', { flags: 'w' }) }));
 app.use(express.json());
 app.use(express.urlencoded({ extended: false }));
 app.use(express.static(path.join(__dirname, 'public')));
