@@ -1,7 +1,7 @@
 html, body, div, span, iframe,
-h1, h2, h3, h4, h5, h6, p, blockquote, pre,
-a, address, code, img,
-dl, dt, dd, ol, ul, li,
+h1, h2, h3, h4, h5, h6, p,
+a, address, img,
+ul, li,
 article, aside, footer, header,
 main, menu, nav, section, summary,
 time, mark, audio, video {
@@ -278,7 +278,8 @@ body {
 
 .landing .project-image {
   width: 50%;
-  height: 300px;
+  height: 400px;
+  box-shadow: 5px 10px 20px rgba(0, 0, 0, 0.2);
 }
 
 .landing .project-text-cover {
