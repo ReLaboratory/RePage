@@ -3,6 +3,7 @@ const express = require('express');
 const path = require('path');
 const logger = require('morgan');
 const mongoose = require('mongoose');
+const fs = require('fs');
 
 const app = express();
 
