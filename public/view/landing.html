@@ -1,33 +1,95 @@
 <main class="main landing">
   <header class="header">
     <div class="header__container">
-      <h1 class="header__title"><b style="color:#ebebeb">re</b>liablers</h1>
-      <h3 class="header__subtitle">welcome to re</h3>
-      <button class="header__scroll-down-button">Research About Re</button>
+      <h1
+        class="header__title"
+        data-scroll-reveal
+      >
+        re
+      </h1>
+      <h3
+        class="header__subtitle"
+        data-scroll-reveal
+      >
+        the software research group
+      </h3>
+      <button class="header__scroll-down-button">Research About RE</button>
     </div>
     <div id="particles-js"></div>
-    <div class="scroll-target"></div>
   </header>
+  <div class="scroll-target" data-scroll-reveal></div>
 
   <section class="section intro">
-    <h2 class="section__title">Reliablers</b></h2>
-    <article class="intro__article intro__article--right">
+    <h2
+      class="section__title"
+      data-scroll-reveal
+    >
+      about us
+    </h2>
+    <hr class="section__line" data-scroll-reveal>
+    <article
+      class="intro__article intro__article--right"
+      data-scroll-reveal
+    >
       <div class="bg-img" id="bg1"></div>
       <p class="section__paragraph" data-paragraph-1></p>
     </article>
-    <article class="intro__article intro__article--left">
+    <article
+      class="intro__article intro__article--left"
+      data-scroll-reveal
+    >
       <div class="bg-img" id="bg2"></div>
       <p class="section__paragraph" data-paragraph-2></p>
     </article>
   </section>
 
+  <section class="section intro-projects">
+    <h2
+      class="section__title"
+      data-scroll-reveal
+    >
+      re's projects
+    </h2>
+    <hr class="section__line" data-scroll-reveal>
+    <ul class="project-list">
+      <div data-cubes></div>
+      <li class="project-item" data-scroll-reveal>
+        <div class="project-image" data-project-image></div>
+        <div class="project-text-cover">
+          <header class="project-content-header">
+            <h4 class="project-name" data-project-name>
+              Project Name
+            </h4>
+          </header>
+          <article class="project-content-body" data-project-body-text>
+            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aperiam rem error magni natus ut expedita velit temporibus id dolorem ratione. Ut accusantium illo quaerat facere est ab nisi, consectetur obcaecati.
+          </article>
+          <a class="project-content-more-link" data-project-more-link>자세히</a>
+        </div>
+      </li>
+    </ul>
+  </section>
+
   <section class="section intro-remembers">
-    <h2 class="section__title">Re<b style="color:#252525;">members</b></h2>
-    <hr class="section__line">
-    <p class="section__content" data-intro-remember></p>
+    <h2
+      class="section__title"
+      data-scroll-reveal
+    >
+      remembers</b>
+    </h2>
+    <hr class="section__line" data-scroll-reveal>
+    <p
+      class="section__content"
+      data-intro-remember
+      data-scroll-reveal
+    >
+    </p>
     <ul class="remembers">
-      <li class="remember">
-        <div class="remember__profile">
+      <li
+        class="remember"
+        data-scroll-reveal
+      >
+        <div class="remember__profile" data-profile>
           <div class="profile__links">
             <a target="blank" data-github><img src="images/logo-github.svg" alt="github"></a>
             <a target="blank" data-facebook><img src="images/logo-facebook.svg" alt="facebook"></a>
@@ -38,4 +100,17 @@
       </li>        
     </ul>
   </section>
+  <div class="facebook-plugin-cover">
+      <iframe
+        src="https://www.facebook.com/plugins/like.php?href=https%3A%2F%2Fwww.facebook.com%2FReResearchGroup&width=149&layout=button&action=like&size=large&show_faces=false&share=true&height=65&appId"
+        width="149"
+        height="65"
+        style="border:none;overflow:hidden"
+        scrolling="no"
+        frameborder="0"
+        allowTransparency="true"
+        allow="encrypted-media"
+      >
+      </iframe>
+  </div>
 </main>
